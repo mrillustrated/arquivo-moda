@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Arquivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+body.sidebarOpen {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top center, rgba(255,255,255,0.06), transparent 32%),
+    linear-gradient(to bottom, #060606 0%, #0a0a0a 52%, #080808 100%);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  width: 200%;
+  animation: move 85s linear infinite;
+  opacity: 0.7;
+  filter: blur(4px) brightness(0.42);
+}
+
+.background img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0.5) 45%, rgba(0,0,0,0.86) 100%),
+    radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 48%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 44px;
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent);
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.55;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 34px 24px 72px;
+  text-align: center;
+}
+
+.heroKicker {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(40px, 8vw, 88px);
+  line-height: 0.95;
+  letter-spacing: 10px;
+  font-weight: 500;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+
+.heroSub {
+  max-width: 700px;
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.58;
+  margin-bottom: 32px;
+}
+
+.topMenu {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menuBtn {
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.72;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.menuBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.22);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.menuBtn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.menuBtn:hover::after {
+  transform: scaleX(1);
+}
+
+.searchWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  padding: 14px 18px;
+  width: 340px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.09);
+  text-align: center;
+  background: rgba(255,255,255,0.06);
+  color: white;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+input:focus {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+#suggestions {
+  width: 340px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.suggestion {
+  padding: 11px 15px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease;
+}
+
+.suggestion:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* SIDEBAR */
+#sidebarBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+  z-index: 44;
+}
+
+#sidebarBackdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -430px;
+  width: 388px;
+  height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(16,16,16,0.98), rgba(8,8,8,0.98)),
+    rgba(10,10,10,0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 50;
+  padding: 28px 24px 24px;
+  transition: left 0.32s ease;
+  overflow: hidden;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 30px 0 70px rgba(0,0,0,0.32);
+}
+
+#sidebar.open {
+  left: 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.sidebarHeaderText {
+  text-align: left;
+}
+
+#sidebarTitle {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  opacity: 0.96;
+}
+
+#sidebarSubtitle {
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.42;
+  max-width: 230px;
+}
+
+#sidebarClose {
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.68;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+#sidebarClose:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.sidebarDivider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,0.14), rgba(255,255,255,0.03));
+  margin-bottom: 18px;
+}
+
+.sidebarBody {
+  display: flex;
+  gap: 18px;
+  height: calc(100vh - 148px);
+}
+
+#sidebarAlphabet {
+  width: 32px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+#sidebarAlphabet::-webkit-scrollbar,
+#sidebarContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+#sidebarAlphabet::-webkit-scrollbar-thumb,
+#sidebarContent::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+}
+
+.alphaItem {
+  font-size: 10px;
+  line-height: 2;
+  opacity: 0.38;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.alphaItem:hover {
+  opacity: 1;
+  transform: translateX(1px);
+}
+
+.alphaItem.active {
+  opacity: 1;
+  color: #fff;
+  transform: translateX(1px);
+  text-shadow: 0 0 16px rgba(255,255,255,0.18);
+}
+
+#sidebarContent {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+  text-align: left;
+}
+
+.sidebarGroupTitle {
+  font-size: 10px;
+  opacity: 0.44;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  scroll-margin-top: 12px;
+}
+
+.sidebarGroupTitle:first-child {
+  margin-top: 0;
+}
+
+.sidebarItem {
+  padding: 12px 0;
+  cursor: pointer;
+  opacity: 0.86;
+  transition: opacity 0.22s ease, transform 0.22s ease, padding-left 0.22s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.sidebarItem:hover {
+  opacity: 1;
+  transform: translateX(2px);
+  padding-left: 3px;
+}
+
+.mainContent {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 32px 100px;
+}
+
+.section {
+  padding: 86px 0 0;
+  text-align: center;
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  margin: 0 0 18px;
+  letter-spacing: 4px;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.92;
+  text-align: center;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 1px;
+  margin: 16px auto 0;
+  background: rgba(255,255,255,0.22);
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+  align-items: start;
+}
+
+.card {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  opacity: 0.95;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.701);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cardLabel {
+  position: absolute;
+  left: 14px;
+  right: 40px;
+  bottom: 18px;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #fff;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  word-break: keep-all;
+  overflow-wrap: normal;
+
+  text-align: left;
+  text-shadow: none;
+  z-index: 2;
+}
+
+.card:hover .cardLabel {
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  h1 {
+    letter-spacing: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .background {
+    opacity: 0.14;
+  }
+
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  input,
+  #suggestions {
+    width: 290px;
+  }
+
+  #sidebar {
+    width: 330px;
+    left: -350px;
+  }
+
+  .mainContent {
+    padding: 0 18px 76px;
+  }
+
+  .hero::after {
+    height: 56px;
+    bottom: 28px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+  }
+
+  .cardLabel {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroContent {
+    padding-top: 44px;
+    padding-bottom: 64px;
+  }
+
+  .heroKicker {
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: 34px;
+    letter-spacing: 6px;
+  }
+
+  .heroSub {
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .topMenu {
+    gap: 14px;
+  }
+
+  .menuBtn {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  input,
+  #suggestions {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .section {
+    padding-top: 64px;
+  }
+
+  .section h2 {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+.cardLabel {
+  left: 12px;
+  right: 22px;
+  bottom: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 0.95;
+}
+
+  #sidebar {
+    width: 300px;
+    left: -320px;
+    padding: 22px 18px 18px;
+  }
+
+  .sidebarBody {
+    gap: 14px;
+    height: calc(100vh - 138px);
+  }
+
+  #sidebarSubtitle {
+    max-width: 180px;
+  }
+
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+.section h2 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.heroKicker {
+  font-size: 10px;
+  letter-spacing: 4px;
+  opacity: 0.5;
+}
+
+.heroSub {
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  opacity: 0.6;
+  max-width: 600px;
+}
+
+.menuBtn {
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.65;
+}
+
+.menuBtn:hover {
+  opacity: 1;
+}
+
+.section h2 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.section h2::after {
+  margin-top: 14px;
+}
+
+
+#sidebarTitle {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+#sidebarSubtitle {
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  line-height: 1.6;
+  opacity: 0.45;
+}
+
+.sidebarGroupTitle {
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.4;
+}
+
+.sidebarItem {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  opacity: 0.85;
+}
+
+.sidebarItem:hover {
+  opacity: 1;
+}
+
+input {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+input::placeholder {
+  letter-spacing: 1.5px;
+  opacity: 0.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="sidebarBackdrop"></div>
+
+<div id="sidebar">
+  <div class="sidebarHeader">
+    <div class="sidebarHeaderText">
+      <div id="sidebarTitle">MENU</div>
+      <div id="sidebarSubtitle">Explore o arquivo por marca, edição ou desfiles mais recentes.</div>
+    </div>
+    <div id="sidebarClose">×</div>
+  </div>
+
+  <div class="sidebarDivider"></div>
+
+  <div class="sidebarBody">
+    <div id="sidebarAlphabet"></div>
+    <div id="sidebarContent"></div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="background" id="heroBackground"></div>
+
+  <div class="heroContent">
+    <div class="heroKicker">Arquivo de desfiles</div>
+    <h1>ARQUIVO</h1>
+    <div class="heroSub">Um índice visual de marcas, modelos, edições e imagens de passarela.</div>
+
+    <div class="topMenu">
+      <div class="menuBtn" id="menuArquivo">ARQUIVO</div>
+      <div class="menuBtn" data-menu="marca">MARCA</div>
+      <div class="menuBtn" data-menu="edicao">EDIÇÃO</div>
+      <div class="menuBtn" data-menu="ultimos">ÚLTIMOS DESFILES</div>
+    </div>
+
+    <div class="searchWrap">
+      <input type="text" id="searchHome" placeholder="buscar tag...">
+      <div id="suggestions"></div>
+    </div>
+  </div>
+</div>
+
+<div class="mainContent">
+
+  <div id="arquivoSection" class="section hidden">
+    <h2>ARQUIVO</h2>
+    <div class="row" id="arquivoGrid"></div>
+  </div>
+
+  <div id="defaultSections">
+    <div class="section">
+      <h2>MAIS RECENTES</h2>
+      <div class="row" id="recentes"></div>
+    </div>
+
+    <div class="section">
+      <h2>TENDÊNCIAS</h2>
+      <div class="row" id="tendencias"></div>
+    </div>
+
+    <div class="section">
+      <h2>MODELOS EM ALTA</h2>
+      <div class="row" id="modelos"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+
+<script>
+const input = document.getElementById("searchHome");
+const suggestionsBox = document.getElementById("suggestions");
+const heroBackground = document.getElementById("heroBackground");
+
+const sidebar = document.getElementById("sidebar");
+const sidebarBackdrop = document.getElementById("sidebarBackdrop");
+const sidebarClose = document.getElementById("sidebarClose");
+const sidebarTitle = document.getElementById("sidebarTitle");
+const sidebarSubtitle = document.getElementById("sidebarSubtitle");
+const sidebarContent = document.getElementById("sidebarContent");
+const sidebarAlphabet = document.getElementById("sidebarAlphabet");
+
+const menuButtons = document.querySelectorAll(".menuBtn[data-menu]");
+const menuArquivo = document.getElementById("menuArquivo");
+
+const defaultSections = document.getElementById("defaultSections");
+const arquivoSection = document.getElementById("arquivoSection");
+const arquivoGrid = document.getElementById("arquivoGrid");
+
+const allTags = [...new Set(data.flatMap(item => item.tags || []))].sort();
+
+function normalizeEdition(edicao) {
+  return (edicao || "").trim().toUpperCase();
+}
+
+function getEditionNumber(edicao) {
+  const normalized = normalizeEdition(edicao);
+  if (!normalized) return -1;
+  const match = normalized.match(/(\d{2})$/);
+  return match ? parseInt(match[1], 10) : -1;
+}
+
+function shuffleArray(array) {
+  const copy = [...array];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function buildHeroCarousel() {
+  heroBackground.innerHTML = "";
+
+  if (!data.length) return;
+
+  const shuffled = shuffleArray(data);
+  const selected = shuffled.slice(0, Math.min(10, shuffled.length));
+  const loopImages = selected.length ? [...selected, ...selected] : [];
+
+  loopImages.forEach(item => {
+    const img = document.createElement("img");
+    img.src = item.thumb || item.image;
+    img.alt = item.marca || "";
+    heroBackground.appendChild(img);
+  });
+}
+
+function go(url) {
+  window.location.href = url;
+}
+
+function irTag(tag) {
+  go("index.html?search=" + encodeURIComponent(tag));
+}
+
+function irModelo(modelo) {
+  go("index.html?modelo=" + encodeURIComponent(modelo));
+}
+
+function irMarca(marca) {
+  go("index.html?marca=" + encodeURIComponent(marca));
+}
+
+function irEdicao(edicao) {
+  go("index.html?edicao=" + encodeURIComponent(edicao));
+}
+
+function irDesfile(desfile) {
+  go("index.html?desfile=" + encodeURIComponent(desfile));
+}
+
+function showDefaultSections() {
+  arquivoSection.classList.add("hidden");
+  defaultSections.classList.remove("hidden");
+}
+
+function showArquivoGrid() {
+  closeSidebar();
+  showDefaultSections();
+  defaultSections.classList.add("hidden");
+  arquivoSection.classList.remove("hidden");
+
+  const random50 = shuffleArray(data).slice(0, 50);
+  arquivoGrid.innerHTML = "";
+
+  random50.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.marca}">
+      <div class="cardLabel">${item.marca}</div>
+    `;
+    card.onclick = () => irDesfile(item.desfile || (item.marca + " " + item.edicao));
+    arquivoGrid.appendChild(card);
+  });
+}
+
+input.addEventListener("input", () => {
+  const value = input.value.toLowerCase().trim();
+  suggestionsBox.innerHTML = "";
+
+  if (!value) return;
+
+  const filtered = allTags.filter(tag =>
+    tag.toLowerCase().includes(value)
+  ).slice(0, 8);
+
+  filtered.forEach(tag => {
+    const div = document.createElement("div");
+    div.className = "suggestion";
+    div.innerText = tag;
+    div.onclick = () => irTag(tag);
+    suggestionsBox.appendChild(div);
+  });
+});
+
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const value = input.value.toLowerCase().trim();
+    if (value) irTag(value);
+  }
+});
+
+function openSidebar(title, html, alphabetHtml = "", subtitle = "Explore o arquivo por marca, edição ou desfiles mais recentes.") {
+  sidebarTitle.innerText = title;
+  sidebarSubtitle.innerText = subtitle;
+  sidebarContent.innerHTML = html;
+  sidebarAlphabet.innerHTML = alphabetHtml;
+  sidebar.classList.add("open");
+  sidebarBackdrop.classList.add("open");
+  document.body.classList.add("sidebarOpen");
+  setTimeout(updateActiveAlpha, 50);
+}
+
+function closeSidebar() {
+  sidebar.classList.remove("open");
+  sidebarBackdrop.classList.remove("open");
+  document.body.classList.remove("sidebarOpen");
+}
+
+sidebarClose.onclick = closeSidebar;
+sidebarBackdrop.onclick = closeSidebar;
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && sidebar.classList.contains("open")) {
+    closeSidebar();
+  }
+});
+
+function buildMarcaMenu() {
+  showDefaultSections();
+
+  const marcas = [...new Set(data.map(item => item.marca).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+  const grouped = {};
+  marcas.forEach(marca => {
+    const letra = marca
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .charAt(0)
+  .toUpperCase();
+    if (!grouped[letra]) grouped[letra] = [];
+    grouped[letra].push(marca);
+  });
+
+  const letras = Object.keys(grouped).sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+  let html = "";
+  letras.forEach(letra => {
+    html += `<div class="sidebarGroupTitle" id="letter-${letra}">${letra}</div>`;
+    grouped[letra].forEach(marca => {
+      html += `<div class="sidebarItem" onclick="go('index.html?marca=${encodeURIComponent(marca)}')">${marca}</div>`;
+    });
+  });
+
+  const alphabetHtml = letras.map(letra =>
+    `<div class="alphaItem" data-letter="${letra}" onclick="scrollToLetter('${letra}')">${letra}</div>`
+  ).join("");
+
+  openSidebar("MARCA", html, alphabetHtml, "Navegue alfabeticamente por todas as marcas presentes no arquivo.");
+}
+
+function scrollToLetter(letra) {
+  const el = document.getElementById(`letter-${letra}`);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(updateActiveAlpha, 180);
+  }
+}
+
+function updateActiveAlpha() {
+  const titles = [...sidebarContent.querySelectorAll(".sidebarGroupTitle[id^='letter-']")];
+  const alphaItems = [...sidebarAlphabet.querySelectorAll(".alphaItem")];
+
+  if (!titles.length || !alphaItems.length) return;
+
+  let activeLetter = null;
+  const sidebarRect = sidebarContent.getBoundingClientRect();
+
+  titles.forEach(title => {
+    const rect = title.getBoundingClientRect();
+    if (rect.top - sidebarRect.top <= 24) {
+      activeLetter = title.id.replace("letter-", "");
+    }
+  });
+
+  if (!activeLetter) {
+    activeLetter = titles[0].id.replace("letter-", "");
+  }
+
+  alphaItems.forEach(item => {
+    item.classList.toggle("active", item.dataset.letter === activeLetter);
+  });
+}
+
+sidebarContent.addEventListener("scroll", updateActiveAlpha);
+
+function buildEdicaoMenu() {
+  showDefaultSections();
+
+  const anos = [...new Set(data.map(item => item.ano).filter(Boolean))]
+    .sort((a, b) => b - a);
+
+  let html = "";
+
+  anos.forEach(ano => {
+    const edicoesMap = new Map();
+
+    data
+      .filter(item => item.ano === ano && item.edicao)
+      .forEach(item => {
+        const normalized = normalizeEdition(item.edicao);
+        if (normalized && !edicoesMap.has(normalized)) {
+          edicoesMap.set(normalized, normalized);
+        }
+      });
+
+    const edicoes = [...edicoesMap.values()]
+      .sort((a, b) => getEditionNumber(b) - getEditionNumber(a) || b.localeCompare(a, 'pt-BR'));
+
+    html += `<div class="sidebarGroupTitle">${ano}</div>`;
+
+    edicoes.forEach(edicao => {
+      html += `<div class="sidebarItem" onclick="go('index.html?edicao=${encodeURIComponent(edicao)}')">${edicao}</div>`;
+    });
+  });
+
+  openSidebar("EDIÇÃO", html, "", "Explore as temporadas e edições disponíveis por ano.");
+}
+
+function buildUltimosDesfilesMenu() {
+  showDefaultSections();
+
+  const unicos = [];
+  const vistos = new Set();
+
+  [...data].reverse().forEach(item => {
+    const chave = item.desfile || (item.marca + "_" + item.edicao);
+    if (!vistos.has(chave)) {
+      vistos.add(chave);
+      unicos.push(item);
+    }
+  });
+
+  const html = unicos.map(item =>
+    `<div class="sidebarItem" onclick="go('index.html?desfile=${encodeURIComponent(item.desfile || "")}')">
+      ${item.desfile || (item.marca + " " + item.edicao)}
+    </div>`
+  ).join("");
+
+  openSidebar("ÚLTIMOS DESFILES", html, "", "Os desfiles mais recentes adicionados ao arquivo, em ordem de chegada.");
+}
+
+menuArquivo.addEventListener("click", showArquivoGrid);
+
+menuButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const type = btn.dataset.menu;
+
+    if (type === "marca") buildMarcaMenu();
+    if (type === "edicao") buildEdicaoMenu();
+    if (type === "ultimos") buildUltimosDesfilesMenu();
+  });
+});
+
+const anosValidos = data
+  .map(item => Number(item.ano))
+  .filter(ano => !Number.isNaN(ano));
+
+const ultimoAno = Math.max(...anosValidos);
+
+const recentesAno = data.filter(item => Number(item.ano) === ultimoAno);
+
+const recentesUnicos = [];
+const vistosRecentes = new Set();
+
+[...data].reverse().forEach(item => {
+  const chave = item.desfile || (item.marca + "_" + item.edicao);
+  if (!vistosRecentes.has(chave)) {
+    vistosRecentes.add(chave);
+    recentesUnicos.push(item);
+  }
+});
+
+const recentesDiv = document.getElementById("recentes");
+
+recentesUnicos.slice(0, 5).forEach(item => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <img src="${item.image}" alt="${item.marca}">
+    <div class="cardLabel">${item.marca}</div>
+  `;
+  card.onclick = () => irDesfile(item.desfile || (item.marca + " " + item.edicao));
+  recentesDiv.appendChild(card);
+});
+
+const tagCount = {};
+recentesAno.forEach(item => {
+  (item.tags || []).forEach(tag => {
+    tagCount[tag] = (tagCount[tag] || 0) + 1;
+  });
+});
+
+const topTags = Object.entries(tagCount)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+
+const tendenciasDiv = document.getElementById("tendencias");
+
+topTags.forEach(([tag]) => {
+  const item = recentesAno.find(i => (i.tags || []).includes(tag));
+  if (!item) return;
+
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <img src="${item.image}" alt="${tag}">
+    <div class="cardLabel">${tag}</div>
+  `;
+  card.onclick = () => irTag(tag);
+  tendenciasDiv.appendChild(card);
+});
+
+const modeloCount = {};
+recentesAno.forEach(item => {
+  if (!item.modelo) return;
+  modeloCount[item.modelo] = (modeloCount[item.modelo] || 0) + 1;
+});
+
+const topModelos = Object.entries(modeloCount)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+
+const modelosDiv = document.getElementById("modelos");
+
+topModelos.forEach(([modelo]) => {
+  const item = recentesAno.find(i => i.modelo === modelo);
+  if (!item) return;
+
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <img src="${item.image}" alt="${modelo}">
+    <div class="cardLabel">${modelo}</div>
+  `;
+  card.onclick = () => irModelo(modelo);
+  modelosDiv.appendChild(card);
+});
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+function go(url) {
+  document.body.classList.remove("loaded");
+  setTimeout(() => {
+    window.location.href = url;
+  }, 200);
+}
+
+const sections = document.querySelectorAll(".section");
+
+function revealOnScroll() {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+
+function buildHeroCarousel() {
+  const heroBackground = document.getElementById("heroBackground");
+  if (!heroBackground) return;
+
+  heroBackground.innerHTML = "";
+
+  const imagens = shuffleArray(data).slice(0, 10);
+
+  imagens.forEach(item => {
+    const img = document.createElement("img");
+    img.src = item.thumb || item.image;
+    heroBackground.appendChild(img);
+  });
+
+  imagens.forEach(item => {
+    const img = document.createElement("img");
+    img.src = item.thumb || item.image;
+    heroBackground.appendChild(img);
+  });
+}
+
+window.addEventListener("load", buildHeroCarousel);
+
+buildHeroCarousel();
+</script>
+
+</body>
+</html>

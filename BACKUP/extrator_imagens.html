@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extrator de Imagens</title>
+  <style>
+    :root{
+      --bg:#0f1115;
+      --panel:#171a21;
+      --panel-2:#1f2430;
+      --text:#f4f7fb;
+      --muted:#a8b0bf;
+      --line:#313846;
+      --accent:#7aa2ff;
+      --accent-2:#94b3ff;
+      --good:#5fd18b;
+      --warn:#ffcc66;
+      --bad:#ff7b7b;
+      --chip:#262c39;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background:linear-gradient(180deg,#0f1115 0%, #11141a 100%);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:1280px;
+      margin:0 auto;
+      padding:28px;
+    }
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:flex-start;
+      margin-bottom:22px;
+    }
+    .hero h1{
+      margin:0 0 8px;
+      font-size:34px;
+      letter-spacing:-.03em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.5;
+      max-width:760px;
+    }
+    .hint{
+      background:rgba(122,162,255,.08);
+      color:#dbe7ff;
+      border:1px solid rgba(122,162,255,.18);
+      padding:14px 16px;
+      border-radius:16px;
+      max-width:360px;
+      font-size:14px;
+      line-height:1.45;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:420px 1fr;
+      gap:18px;
+    }
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .sidebar{
+      padding:18px;
+      position:sticky;
+      top:16px;
+      height:fit-content;
+    }
+    .content{
+      padding:18px;
+    }
+    .section-title{
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted);
+      margin:0 0 12px;
+    }
+    .tabs{
+      display:flex;
+      gap:8px;
+      margin-bottom:14px;
+    }
+    .tab{
+      border:1px solid var(--line);
+      background:var(--chip);
+      color:var(--text);
+      padding:10px 14px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .tab.active{
+      background:var(--accent);
+      color:#08111f;
+      border-color:transparent;
+    }
+    label{
+      display:block;
+      margin:14px 0 8px;
+      font-size:14px;
+      color:#dbe1ea;
+      font-weight:600;
+    }
+    input[type="text"], textarea, select{
+      width:100%;
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      color:var(--text);
+      border-radius:16px;
+      padding:13px 14px;
+      font:inherit;
+      outline:none;
+    }
+    textarea{
+      min-height:220px;
+      resize:vertical;
+      line-height:1.45;
+    }
+    input[type="text"]:focus, textarea:focus, select:focus{
+      border-color:var(--accent);
+      box-shadow:0 0 0 4px rgba(122,162,255,.12);
+    }
+    .row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .row > *{flex:1}
+    .checks{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    .check{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      padding:12px 14px;
+      border-radius:16px;
+    }
+    .check input{margin-top:2px}
+    .btns{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:16px;
+    }
+    button{
+      border:none;
+      background:var(--chip);
+      color:var(--text);
+      padding:13px 14px;
+      border-radius:16px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+    }
+    button.primary{
+      background:var(--accent);
+      color:#08111f;
+    }
+    button.ghost{
+      border:1px solid var(--line);
+      background:transparent;
+    }
+    button:disabled{
+      opacity:.55;
+      cursor:not-allowed;
+    }
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-bottom:16px;
+    }
+    .stat{
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px;
+    }
+    .stat .k{
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:8px;
+    }
+    .stat .v{
+      font-size:24px;
+      font-weight:800;
+    }
+    .toolbar{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .toolbar .left, .toolbar .right{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .search{
+      min-width:240px;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+      gap:14px;
+    }
+    .card{
+      background:var(--panel-2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      position:relative;
+    }
+    .thumb{
+      aspect-ratio:4/5;
+      background:#0c0f14;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      background:#0c0f14;
+    }
+    .meta{
+      padding:12px;
+    }
+    .meta .name{
+      font-size:13px;
+      font-weight:700;
+      line-height:1.35;
+      word-break:break-word;
+      margin-bottom:6px;
+    }
+    .meta .url{
+      font-size:12px;
+      color:var(--muted);
+      word-break:break-all;
+      line-height:1.35;
+      max-height:3.9em;
+      overflow:hidden;
+    }
+    .pick{
+      position:absolute;
+      top:10px;
+      left:10px;
+      width:22px;
+      height:22px;
+      accent-color:var(--accent);
+    }
+    .empty{
+      padding:34px;
+      text-align:center;
+      color:var(--muted);
+      background:var(--panel-2);
+      border:1px dashed var(--line);
+      border-radius:18px;
+    }
+    .log{
+      margin-top:14px;
+      border:1px solid var(--line);
+      background:#0d1016;
+      border-radius:18px;
+      padding:12px;
+      min-height:120px;
+      max-height:220px;
+      overflow:auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size:12px;
+      color:#cad4e5;
+      white-space:pre-wrap;
+      line-height:1.5;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      padding:8px 12px;
+      background:var(--chip);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+    }
+    .mode-pane{display:none}
+    .mode-pane.active{display:block}
+    .footer-note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+    a.inline{
+      color:#cfe0ff;
+    }
+    @media (max-width:1080px){
+      .grid{grid-template-columns:1fr}
+      .sidebar{position:static}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:700px){
+      .wrap{padding:16px}
+      .hero{flex-direction:column}
+      .stats{grid-template-columns:1fr 1fr}
+      .btns{grid-template-columns:1fr}
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>Extrator de imagens</h1>
+        <p>Programa em HTML para extrair imagens de páginas e galerias. Você pode tentar por URL ou colar o HTML da página quando o navegador bloquear o acesso direto.</p>
+      </div>
+      <div class="hint">
+        <strong>Importante:</strong> alguns sites bloqueiam leitura direta por segurança do navegador. Nesses casos, abra a página, pegue o código-fonte e cole aqui na aba <strong>HTML</strong>.
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel sidebar">
+        <div class="section-title">Entrada</div>
+
+        <div class="tabs">
+          <button class="tab active" data-mode="url">URL</button>
+          <button class="tab" data-mode="html">HTML</button>
+        </div>
+
+        <div class="mode-pane active" id="pane-url">
+          <label for="pageUrl">Link da página</label>
+          <input id="pageUrl" type="text" placeholder="https://spfw.com.br/desfile/apartamento03/" />
+
+          <label for="proxyUrl">Prefixo de proxy CORS opcional</label>
+          <input id="proxyUrl" type="text" placeholder="deixe em branco ou use um proxy seu" />
+
+          <div class="footer-note">
+            Sem um proxy, alguns sites funcionam e outros não. Esse campo existe porque um HTML local não consegue contornar o bloqueio do navegador sozinho.
+          </div>
+        </div>
+
+        <div class="mode-pane" id="pane-html">
+          <label for="baseUrl">URL base da página</label>
+          <input id="baseUrl" type="text" placeholder="https://spfw.com.br/desfile/apartamento03/" />
+
+          <label for="htmlInput">Cole aqui o HTML ou o código-fonte da página</label>
+          <textarea id="htmlInput" placeholder="Cole o HTML completo da página aqui"></textarea>
+        </div>
+
+        <div class="checks">
+          <label class="check">
+            <input id="sameDomain" type="checkbox" checked />
+            <span>
+              <strong>Manter só imagens do mesmo domínio</strong><br>
+              Útil para evitar ícones, logos e assets de terceiros.
+            </span>
+          </label>
+
+          <label class="check">
+            <input id="removeResized" type="checkbox" checked />
+            <span>
+              <strong>Remover versões duplicadas/redimensionadas</strong><br>
+              Junta arquivos parecidos como <code>-960x1200</code> e mantém uma versão por base.
+            </span>
+          </label>
+
+          <label class="check">
+            <input id="preferAbsolute" type="checkbox" checked />
+            <span>
+              <strong>Normalizar URLs absolutas</strong><br>
+              Converte caminhos relativos em links completos.
+            </span>
+          </label>
+        </div>
+
+        <div class="btns">
+          <button class="primary" id="extractBtn">Extrair imagens</button>
+          <button class="ghost" id="clearBtn">Limpar</button>
+          <button id="copyBtn" disabled>Copiar URLs</button>
+          <button id="jsonBtn" disabled>Exportar JSON</button>
+          <button id="txtBtn" disabled>Exportar TXT</button>
+          <button id="openBtn" disabled>Abrir selecionadas</button>
+          <button class="primary" id="downloadBtn" disabled>BAIXAR TUDO</button>
+          <button class="primary" id="zipBtn" disabled>ZIP DAS SELECIONADAS</button>
+        </div>
+
+        <div class="log" id="log">Pronto.</div>
+      </div>
+
+      <div class="panel content">
+        <div class="stats">
+          <div class="stat">
+            <div class="k">Encontradas</div>
+            <div class="v" id="statFound">0</div>
+          </div>
+          <div class="stat">
+            <div class="k">Selecionadas</div>
+            <div class="v" id="statSelected">0</div>
+          </div>
+          <div class="stat">
+            <div class="k">Domínio</div>
+            <div class="v" id="statDomain" style="font-size:18px">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Modo</div>
+            <div class="v" id="statMode" style="font-size:18px">URL</div>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="left">
+            <span class="pill" id="statusPill">Sem resultados</span>
+            <button id="selectAllBtn" disabled>Selecionar tudo</button>
+            <button id="unselectAllBtn" disabled>Limpar seleção</button>
+          </div>
+          <div class="right">
+            <input id="searchInput" class="search" type="text" placeholder="Filtrar por nome ou URL" />
+            <select id="sortSelect">
+              <option value="original">Ordem original</option>
+              <option value="name">Nome do arquivo</option>
+              <option value="domain">Domínio</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="galleryWrap">
+          <div class="empty">Nenhuma imagem ainda. Cole um link ou um HTML e clique em <strong>Extrair imagens</strong>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+(() => {
+  const state = {
+    mode: 'url',
+    items: [],
+    filtered: [],
+    selected: new Set(),
+    lastBaseUrl: '',
+  };
+
+  const els = {
+    tabs: [...document.querySelectorAll('.tab')],
+    panes: {
+      url: document.getElementById('pane-url'),
+      html: document.getElementById('pane-html'),
+    },
+    pageUrl: document.getElementById('pageUrl'),
+    proxyUrl: document.getElementById('proxyUrl'),
+    baseUrl: document.getElementById('baseUrl'),
+    htmlInput: document.getElementById('htmlInput'),
+    sameDomain: document.getElementById('sameDomain'),
+    removeResized: document.getElementById('removeResized'),
+    preferAbsolute: document.getElementById('preferAbsolute'),
+    extractBtn: document.getElementById('extractBtn'),
+    clearBtn: document.getElementById('clearBtn'),
+    copyBtn: document.getElementById('copyBtn'),
+    jsonBtn: document.getElementById('jsonBtn'),
+    txtBtn: document.getElementById('txtBtn'),
+    openBtn: document.getElementById('openBtn'),
+    downloadBtn: document.getElementById('downloadBtn'),
+    zipBtn: document.getElementById('zipBtn'),
+    selectAllBtn: document.getElementById('selectAllBtn'),
+    unselectAllBtn: document.getElementById('unselectAllBtn'),
+    searchInput: document.getElementById('searchInput'),
+    sortSelect: document.getElementById('sortSelect'),
+    galleryWrap: document.getElementById('galleryWrap'),
+    log: document.getElementById('log'),
+    statFound: document.getElementById('statFound'),
+    statSelected: document.getElementById('statSelected'),
+    statDomain: document.getElementById('statDomain'),
+    statMode: document.getElementById('statMode'),
+    statusPill: document.getElementById('statusPill'),
+  };
+
+  function log(msg){
+    const time = new Date().toLocaleTimeString('pt-BR');
+    els.log.textContent += `\n[${time}] ${msg}`;
+    els.log.scrollTop = els.log.scrollHeight;
+  }
+
+  function resetLog(text = 'Pronto.'){
+    els.log.textContent = text;
+  }
+
+  function setMode(mode){
+    state.mode = mode;
+    els.tabs.forEach(btn => btn.classList.toggle('active', btn.dataset.mode === mode));
+    Object.entries(els.panes).forEach(([key, pane]) => pane.classList.toggle('active', key === mode));
+    els.statMode.textContent = mode.toUpperCase();
+  }
+
+  function sanitizeName(name){
+    return name.replace(/[\\/:*?"<>|]+/g, '_').trim() || 'imagem';
+  }
+
+  function filenameFromUrl(url, idx){
+    try{
+      const u = new URL(url);
+      const name = decodeURIComponent(u.pathname.split('/').pop() || '').trim();
+      if(name && name.includes('.')) return sanitizeName(name);
+    }catch{}
+    return `imagem_${String(idx + 1).padStart(4, '0')}.jpg`;
+  }
+
+  function baseKey(rawUrl){
+    try{
+      const u = new URL(rawUrl);
+      let path = u.pathname.replace(/-\d+x\d+(?=\.[a-z0-9]+$)/i, '');
+      return `${u.hostname}${path}`;
+    }catch{
+      return rawUrl;
+    }
+  }
+
+  function isImageLike(url){
+    const s = (url || '').toLowerCase();
+    return /\.(jpg|jpeg|png|webp|gif|bmp|avif|svg)(\?|#|$)/i.test(s)
+      || s.includes('format=jpg')
+      || s.includes('format=png')
+      || s.includes('/wp-content/uploads/')
+      || s.includes('image')
+      || s.includes('images');
+  }
+
+  function abs(base, value){
+    try{
+      return new URL(value, base).href;
+    }catch{
+      return value;
+    }
+  }
+
+  function urlsFromSrcset(value){
+    return (value || '')
+      .split(',')
+      .map(part => part.trim().split(/\s+/)[0]?.trim())
+      .filter(Boolean);
+  }
+
+  function urlsFromStyle(style){
+    const matches = [...(style || '').matchAll(/url\((.*?)\)/gi)];
+    return matches.map(m => m[1].trim().replace(/^['"]|['"]$/g, '')).filter(Boolean);
+  }
+
+  function extractFromHtml(html, baseUrl){
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const found = [];
+    const add = (v) => {
+      if(!v || String(v).startsWith('data:')) return;
+      const finalValue = els.preferAbsolute.checked ? abs(baseUrl, String(v).trim()) : String(v).trim();
+      if(isImageLike(finalValue)) found.push(finalValue);
+    };
+
+    doc.querySelectorAll('*').forEach(el => {
+      ['src','data-src','data-lazy-src','data-original','data-image','href','content'].forEach(attr => {
+        const v = el.getAttribute(attr);
+        if(v) add(v);
+      });
+
+      ['srcset','data-srcset'].forEach(attr => {
+        const v = el.getAttribute(attr);
+        if(v) urlsFromSrcset(v).forEach(add);
+      });
+
+      const style = el.getAttribute('style');
+      if(style) urlsFromStyle(style).forEach(add);
+    });
+
+    doc.querySelectorAll('script').forEach(script => {
+      const text = script.textContent || '';
+      [...text.matchAll(/https?:\/\/[^"'\\\s)]+/g)].forEach(m => add(m[0]));
+      [...text.matchAll(/["']([^"']+\.(?:jpg|jpeg|png|webp|gif|bmp|avif|svg)[^"']*)["']/gi)].forEach(m => add(m[1]));
+      [...text.matchAll(/["'](\/[^"']+\.(?:jpg|jpeg|png|webp|gif|bmp|avif|svg)[^"']*)["']/gi)].forEach(m => add(m[1]));
+    });
+
+    let urls = [...new Set(found)];
+
+    if(els.sameDomain.checked && baseUrl){
+      try{
+        const host = new URL(baseUrl).hostname;
+        urls = urls.filter(u => {
+          try { return new URL(u).hostname === host; }
+          catch { return false; }
+        });
+      }catch{}
+    }
+
+    if(els.removeResized.checked){
+      const seen = new Set();
+      urls = urls.filter(u => {
+        const k = baseKey(u);
+        if(seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      });
+    }
+
+    return urls.map((url, idx) => ({
+      id: `${idx}_${Math.random().toString(36).slice(2,8)}`,
+      url,
+      name: filenameFromUrl(url, idx),
+      domain: (() => { try { return new URL(url).hostname; } catch { return '—'; } })(),
+    }));
+  }
+
+  async function fetchHtml(){
+    const pageUrl = els.pageUrl.value.trim();
+    const proxy = els.proxyUrl.value.trim();
+    if(!pageUrl) throw new Error('Cole uma URL primeiro.');
+
+    state.lastBaseUrl = pageUrl;
+    const finalUrl = proxy ? proxy + encodeURIComponent(pageUrl) : pageUrl;
+
+    log(`Lendo: ${pageUrl}`);
+    const res = await fetch(finalUrl);
+    if(!res.ok) throw new Error(`Falha ao buscar a página. Status ${res.status}`);
+    return await res.text();
+  }
+
+  function currentVisibleItems(){
+    const q = els.searchInput.value.trim().toLowerCase();
+    let list = [...state.items];
+
+    if(q){
+      list = list.filter(item =>
+        item.name.toLowerCase().includes(q) ||
+        item.url.toLowerCase().includes(q) ||
+        item.domain.toLowerCase().includes(q)
+      );
+    }
+
+    const sort = els.sortSelect.value;
+    if(sort === 'name'){
+      list.sort((a,b) => a.name.localeCompare(b.name, 'pt-BR'));
+    } else if(sort === 'domain'){
+      list.sort((a,b) => a.domain.localeCompare(b.domain, 'pt-BR') || a.name.localeCompare(b.name, 'pt-BR'));
+    }
+
+    return list;
+  }
+
+  function updateStats(){
+    els.statFound.textContent = state.items.length;
+    els.statSelected.textContent = state.selected.size;
+    els.statDomain.textContent = state.lastBaseUrl ? (() => { try { return new URL(state.lastBaseUrl).hostname; } catch { return '—'; } })() : '—';
+    els.statusPill.textContent = state.items.length ? `${state.items.length} imagens carregadas` : 'Sem resultados';
+
+    const enabled = state.items.length > 0;
+    els.copyBtn.disabled = !enabled;
+    els.jsonBtn.disabled = !enabled;
+    els.txtBtn.disabled = !enabled;
+    els.openBtn.disabled = state.selected.size === 0;
+    els.downloadBtn.disabled = !enabled;
+    els.zipBtn.disabled = state.selected.size === 0;
+    els.selectAllBtn.disabled = !enabled;
+    els.unselectAllBtn.disabled = !enabled;
+  }
+
+  function render(){
+    state.filtered = currentVisibleItems();
+    updateStats();
+
+    if(!state.filtered.length){
+      els.galleryWrap.innerHTML = `<div class="empty">Nada para mostrar com esse filtro.</div>`;
+      return;
+    }
+
+    const html = `<div class="gallery">${
+      state.filtered.map(item => `
+        <label class="card">
+          <input class="pick" type="checkbox" data-id="${item.id}" ${state.selected.has(item.id) ? 'checked' : ''} />
+          <div class="thumb">
+            <img src="${item.url}" alt="${item.name}" loading="lazy" onerror="this.style.opacity='.25'" />
+          </div>
+          <div class="meta">
+            <div class="name">${escapeHtml(item.name)}</div>
+            <div class="url">${escapeHtml(item.url)}</div>
+          </div>
+        </label>
+      `).join('')
+    }</div>`;
+    els.galleryWrap.innerHTML = html;
+
+    els.galleryWrap.querySelectorAll('.pick').forEach(input => {
+      input.addEventListener('change', () => {
+        if(input.checked) state.selected.add(input.dataset.id);
+        else state.selected.delete(input.dataset.id);
+        updateStats();
+      });
+    });
+  }
+
+  function escapeHtml(str){
+    return String(str)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
+  async function extract(){
+    try{
+      els.extractBtn.disabled = true;
+      resetLog('Começando extração...');
+      state.items = [];
+      state.selected.clear();
+
+      let html = '';
+      let baseUrl = '';
+
+      if(state.mode === 'url'){
+        html = await fetchHtml();
+        baseUrl = els.pageUrl.value.trim();
+      } else {
+        html = els.htmlInput.value;
+        baseUrl = els.baseUrl.value.trim();
+        if(!html.trim()) throw new Error('Cole o HTML da página.');
+        if(!baseUrl.trim()) throw new Error('Informe a URL base para resolver links relativos.');
+        state.lastBaseUrl = baseUrl;
+      }
+
+      const items = extractFromHtml(html, baseUrl);
+      state.items = items;
+      log(`Imagens encontradas: ${items.length}`);
+
+      if(items.length){
+        log(`Primeira imagem: ${items[0].url}`);
+      } else {
+        log('Nenhuma imagem detectada. Tente desmarcar o filtro de mesmo domínio ou usar a aba HTML.');
+      }
+
+      render();
+    } catch(err){
+      log(`Erro: ${err.message}`);
+      els.galleryWrap.innerHTML = `<div class="empty">Não consegui extrair dessa forma.<br><br><strong>${escapeHtml(err.message)}</strong><br><br>Tente a aba <strong>HTML</strong>.</div>`;
+      updateStats();
+    } finally {
+      els.extractBtn.disabled = false;
+    }
+  }
+
+  function clearAll(){
+    state.items = [];
+    state.filtered = [];
+    state.selected.clear();
+    state.lastBaseUrl = '';
+    els.pageUrl.value = '';
+    els.baseUrl.value = '';
+    els.htmlInput.value = '';
+    els.searchInput.value = '';
+    resetLog('Pronto.');
+    render();
+    els.galleryWrap.innerHTML = `<div class="empty">Nenhuma imagem ainda. Cole um link ou um HTML e clique em <strong>Extrair imagens</strong>.</div>`;
+  }
+
+  function selectedOrAll(){
+    const selectedItems = state.items.filter(item => state.selected.has(item.id));
+    return selectedItems.length ? selectedItems : state.items;
+  }
+
+  function copyUrls(){
+    const items = selectedOrAll();
+    const text = items.map(i => i.url).join('\n');
+    navigator.clipboard.writeText(text);
+    log(`Copiadas ${items.length} URLs.`);
+  }
+
+  function downloadFile(name, content, type){
+    const blob = new Blob([content], {type});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+  }
+
+  function exportJson(){
+    const items = selectedOrAll();
+    downloadFile('imagens_extraidas.json', JSON.stringify(items, null, 2), 'application/json');
+    log(`JSON exportado com ${items.length} itens.`);
+  }
+
+  function exportTxt(){
+    const items = selectedOrAll();
+    downloadFile('imagens_extraidas.txt', items.map(i => i.url).join('\n'), 'text/plain;charset=utf-8');
+    log(`TXT exportado com ${items.length} URLs.`);
+  }
+
+
+  async function downloadAllDirect(){
+    const items = selectedOrAll();
+    if(!items.length){
+      log('Nada para baixar.');
+      return;
+    }
+
+    log(`Iniciando download de ${items.length} imagem(ns)...`);
+
+    for(let i = 0; i < items.length; i++){
+      const item = items[i];
+      try{
+        const response = await fetch(item.url, { mode: 'cors' });
+        if(!response.ok) throw new Error(`status ${response.status}`);
+
+        const blob = await response.blob();
+        const name = item.name || `imagem_${String(i + 1).padStart(4, '0')}.jpg`;
+
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+        log(`Baixada: ${name}`);
+      } catch (err) {
+        try{
+          const a = document.createElement('a');
+          a.href = item.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.download = item.name || '';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          log(`Tentativa alternativa: ${item.name}`);
+        } catch {
+          log(`Falha: ${item.url}`);
+        }
+      }
+
+      await new Promise(r => setTimeout(r, 180));
+    }
+
+    log('Download concluído ou enviado para o navegador.');
+  }
+
+
+  async function createZipFromSelected(){
+    const items = state.items.filter(item => state.selected.has(item.id));
+    if(!items.length){
+      log('Selecione pelo menos uma imagem para criar o ZIP.');
+      return;
+    }
+
+    if(typeof JSZip === 'undefined'){
+      log('JSZip não carregou. Verifique sua conexão com a internet.');
+      alert('Não consegui carregar a biblioteca de ZIP. Abra o HTML com internet ligada e tente de novo.');
+      return;
+    }
+
+    els.zipBtn.disabled = true;
+    els.statusPill.textContent = 'Montando ZIP...';
+    log(`Preparando ZIP com ${items.length} imagem(ns)...`);
+
+    const zip = new JSZip();
+    let ok = 0;
+    let fail = 0;
+
+    for(let i = 0; i < items.length; i++){
+      const item = items[i];
+      try{
+        const response = await fetch(item.url, { mode: 'cors' });
+        if(!response.ok) throw new Error(`status ${response.status}`);
+
+        const blob = await response.blob();
+        const extMatch = item.url.match(/\.(jpg|jpeg|png|webp|gif|bmp|avif|svg)(?:\?|#|$)/i);
+        const fallbackExt = extMatch ? extMatch[1].toLowerCase() : 'jpg';
+        const filename = (item.name && item.name.includes('.')) ? item.name : `imagem_${String(i + 1).padStart(4, '0')}.${fallbackExt}`;
+
+        zip.file(filename, blob);
+        ok++;
+        log(`Adicionada ao ZIP: ${filename}`);
+      } catch (err) {
+        fail++;
+        log(`Falhou no ZIP: ${item.url} (${err.message})`);
+      }
+    }
+
+    if(ok === 0){
+      els.statusPill.textContent = 'ZIP indisponível';
+      els.zipBtn.disabled = false;
+      alert('Não consegui baixar nenhuma das imagens selecionadas para montar o ZIP. Esse site provavelmente bloqueou o acesso direto.');
+      return;
+    }
+
+    const zipBlob = await zip.generateAsync({ type: 'blob' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(zipBlob);
+    a.download = 'imagens_selecionadas.zip';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+
+    els.statusPill.textContent = `ZIP pronto: ${ok} arquivo(s)`;
+    els.zipBtn.disabled = false;
+    log(`ZIP concluído. Sucesso: ${ok} | Falhas: ${fail}`);
+  }
+
+
+  function openSelected(){
+    const items = selectedOrAll();
+    items.forEach(item => window.open(item.url, '_blank', 'noopener,noreferrer'));
+    log(`Abertas ${items.length} imagens em novas abas.`);
+  }
+
+  function selectAllVisible(){
+    state.filtered.forEach(item => state.selected.add(item.id));
+    render();
+  }
+
+  function unselectAll(){
+    state.selected.clear();
+    render();
+  }
+
+  els.tabs.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
+  els.extractBtn.addEventListener('click', extract);
+  els.clearBtn.addEventListener('click', clearAll);
+  els.copyBtn.addEventListener('click', copyUrls);
+  els.jsonBtn.addEventListener('click', exportJson);
+  els.txtBtn.addEventListener('click', exportTxt);
+  els.openBtn.addEventListener('click', openSelected);
+  els.downloadBtn.addEventListener('click', downloadAllDirect);
+  els.zipBtn.addEventListener('click', createZipFromSelected);
+  els.selectAllBtn.addEventListener('click', selectAllVisible);
+  els.unselectAllBtn.addEventListener('click', unselectAll);
+  els.searchInput.addEventListener('input', render);
+  els.sortSelect.addEventListener('change', render);
+
+  render();
+
+  els.pageUrl.value = 'https://spfw.com.br/desfile/apartamento03/';
+  log('Dica: para SPFW, primeiro tente por URL. Se o navegador bloquear, abra o código-fonte da página e cole na aba HTML.');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Arquivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+#backBtn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+  cursor: pointer;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+
+#backBtn:hover {
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+#mainContent.blur {
+  filter: blur(4px) brightness(0.65);
+}
+
+.topBar {
+  padding: 56px 24px 18px;
+}
+
+.topBar.compact {
+  padding-bottom: 0;
+}
+
+h1 {
+  margin: 0 0 24px;
+  letter-spacing: 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+input,
+select {
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: white;
+  outline: none;
+  min-width: 190px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-1px);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding-right: 44px;
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.7) 50%),
+    linear-gradient(135deg, rgba(255,255,255,0.7) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% - 3px),
+    calc(100% - 14px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+select:hover,
+input:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+
+select option {
+  background: #111;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+#suggestions {
+  width: 240px;
+  margin: 12px auto 0;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  text-align: left;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.suggestion {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.suggestion:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+#tagContainer {
+  margin: 14px auto 0;
+  max-width: 1000px;
+}
+
+#tagContainer.hidden {
+  display: none;
+}
+
+.activeTag {
+  display: inline-block;
+  margin: 5px;
+  padding: 7px 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.activeTag:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.desfileHero {
+  max-width: 1500px;
+  margin: 6px auto 0;
+  padding: 0 28px 22px;
+  display: none;
+}
+
+.desfileHero.show {
+  display: block;
+}
+
+.desfileHeroCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.desfileHeroCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.02));
+  pointer-events: none;
+}
+
+.desfileHeroImg {
+  width: 100%;
+  height: 180px; /* mais fino */
+  object-fit: cover;
+
+  filter: blur(40px) brightness(0.5) saturate(2.8);
+  transform: scale(1.2); /* evita bordas do blur */
+}
+
+.desfileHeroInfo {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 20px;
+  z-index: 2;
+  text-align: left;
+}
+
+.desfileHeroKicker {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 8px;
+}
+
+.desfileHeroTitle {
+  font-size: clamp(24px, 4vw, 46px);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.desfileHeroMeta {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.looksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding: 28px 28px 60px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.lookCard {
+  width: 100%;
+  animation: fadeUp 0.35s ease both;
+}
+
+.lookCard img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
+}
+
+.lookCard img:hover {
+  transform: translateY(-3px);
+  opacity: 0.92;
+  filter: brightness(1.04);
+}
+
+.lookCardLabel {
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.58;
+}
+
+.coverGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 18px;
+  padding: 30px 28px 70px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.coverCard {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  animation: fadeUp 0.35s ease both;
+}
+
+.coverCard:hover {
+  transform: translateY(-4px);
+  opacity: 0.94;
+}
+
+.coverCard img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.coverLabel {
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.78;
+  line-height: 1.5;
+}
+
+.emptyState {
+  max-width: 700px;
+  margin: 40px auto 80px;
+  padding: 40px 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+}
+
+.emptyKicker {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 14px;
+}
+
+.emptyTitle {
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.emptyText {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.97);
+  z-index: 100;
+  padding: 28px 34px 34px;
+  box-sizing: border-box;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.overlayContent {
+  display: flex;
+  gap: 54px;
+  align-items: flex-start;
+  max-width: 1400px;
+  width: 100%;
+  justify-content: center;
+}
+
+.overlayMedia {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 860px;
+  width: 100%;
+}
+
+#overlayImg {
+  max-width: 100%;
+  max-height: 76vh;
+  border-radius: 16px;
+  display: block;
+}
+
+.imageArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.35);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  z-index: 2;
+}
+
+.imageArrow:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.imageArrow.prev {
+  left: 14px;
+}
+
+.imageArrow.next {
+  right: 14px;
+}
+
+.thumbStrip {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+  padding-top: 16px;
+  justify-content: flex-start;
+}
+
+.thumbStrip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbStrip::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.16);
+  border-radius: 10px;
+}
+
+.thumb {
+  flex: 0 0 70px;
+  width: 70px;
+  height: 94px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.45;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.thumb:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+
+.thumb.active {
+  opacity: 1;
+  border-color: rgba(255,255,255,0.45);
+}
+
+.infoCard {
+  width: 290px;
+  text-align: left;
+  padding-top: 8px;
+}
+
+.label {
+  font-size: 11px;
+  opacity: 0.45;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  display: inline-block;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.value:hover {
+  opacity: 0.65;
+  border-color: rgba(255,255,255,0.28);
+}
+
+.overlayNav {
+  display: flex;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.overlayNavBtn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 11px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.overlayNavBtn:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+}
+
+.overlayCounter {
+  margin-top: 18px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  font-size: 38px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#closeBtn:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .coverGrid,
+  .looksGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .overlayContent {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .coverGrid,
+  .looksGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px 18px 50px;
+  }
+
+  .desfileHero {
+    padding: 0 18px 18px;
+  }
+
+  .desfileHeroInfo {
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+  }
+
+  .overlay {
+    padding: 20px 16px 24px;
+  }
+
+  .overlayContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .overlayMedia {
+    max-width: 100%;
+  }
+
+  #overlayImg {
+    max-width: 90vw;
+    max-height: 58vh;
+  }
+
+  .infoCard {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .overlayNav {
+    justify-content: center;
+  }
+
+  .thumbStrip {
+    justify-content: flex-start;
+    max-width: 90vw;
+  }
+
+  #backBtn {
+    top: 18px;
+    left: 18px;
+  }
+
+  .imageArrow {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  .filters {
+    gap: 10px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .coverGrid,
+  .looksGrid {
+    gap: 22px 12px;
+  }
+
+  .value {
+    font-size: 15px;
+  }
+
+  .thumb {
+    flex-basis: 58px;
+    width: 58px;
+    height: 78px;
+  }
+
+  .overlayNavBtn {
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+.desfileHeroTitle,
+.coverLabel,
+.value {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.desfileHeroTitle {
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.desfileHeroMeta {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.coverLabel {
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.label,
+.lookCardLabel,
+.overlayCounter,
+.activeTag,
+.suggestion,
+input,
+select {
+  font-family: "Inter", sans-serif;
+}
+
+.thumb {
+  opacity: 0.4;
+}
+
+.thumb.active {
+  opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div id="backBtn" onclick="voltarPagina()">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+    <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<div id="mainContent">
+  <div class="topBar" id="topBar">
+    <h1>ARQUIVO</h1>
+
+    <div class="filters" id="filters">
+      <input type="text" id="search" placeholder="buscar tag...">
+
+      <select id="ano">
+        <option value="">Todos os anos</option>
+      </select>
+
+      <select id="marca">
+        <option value="">Todas as marcas</option>
+      </select>
+    </div>
+
+    <div id="suggestions"></div>
+    <div id="tagContainer"></div>
+  </div>
+
+  <div class="desfileHero" id="desfileHero"></div>
+  <div id="grid"></div>
+</div>
+
+<div class="overlay" id="overlay">
+  <span id="closeBtn">&times;</span>
+
+  <div class="overlayContent">
+    <div class="overlayMedia">
+      <button class="imageArrow prev" id="imagePrevBtn">‹</button>
+      <img id="overlayImg" alt="">
+      <button class="imageArrow next" id="imageNextBtn">›</button>
+      <div class="thumbStrip" id="thumbStrip"></div>
+    </div>
+
+    <div class="infoCard">
+      <div class="label">Marca</div>
+      <div id="infoMarca"></div>
+
+      <div class="label">Ano</div>
+      <div id="infoAno"></div>
+
+      <div class="label">Modelo</div>
+      <div id="infoModelo"></div>
+
+      <div class="overlayCounter" id="overlayCounter"></div>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+
+<script>
+const grid = document.getElementById("grid");
+const topBar = document.getElementById("topBar");
+const filtersWrap = document.getElementById("filters");
+const desfileHero = document.getElementById("desfileHero");
+const searchInput = document.getElementById("search");
+const anoSelect = document.getElementById("ano");
+const marcaSelect = document.getElementById("marca");
+const suggestionsBox = document.getElementById("suggestions");
+const tagContainer = document.getElementById("tagContainer");
+
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlayImg");
+const mainContent = document.getElementById("mainContent");
+const thumbStrip = document.getElementById("thumbStrip");
+const overlayCounter = document.getElementById("overlayCounter");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const imagePrevBtn = document.getElementById("imagePrevBtn");
+const imageNextBtn = document.getElementById("imageNextBtn");
+
+const infoMarca = document.getElementById("infoMarca");
+const infoAno = document.getElementById("infoAno");
+const infoModelo = document.getElementById("infoModelo");
+
+let activeTags = [];
+let activeModelo = "";
+let activeEdicao = "";
+let activeDesfile = "";
+
+let currentOverlayItems = [];
+let currentOverlayIndex = 0;
+
+function voltarPagina() {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "home.html";
+  }
+}
+
+const anos = [
+  ...new Set(
+    data.map(item => String(item.ano).trim())
+  )
+].sort((a, b) => b - a);
+anos.forEach(ano => {
+  const option = document.createElement("option");
+  option.value = ano;
+  option.textContent = ano;
+  anoSelect.appendChild(option);
+});
+
+const marcas = [...new Set(data.map(item => item.marca).filter(Boolean))].sort((a, b) =>
+  a.localeCompare(b, "pt-BR")
+);
+marcas.forEach(marca => {
+  const option = document.createElement("option");
+  option.value = marca;
+  option.textContent = marca;
+  marcaSelect.appendChild(option);
+});
+
+const allTags = [...new Set(data.flatMap(item => item.tags || []))].sort();
+
+const params = new URLSearchParams(window.location.search);
+const searchParam = params.get("search");
+const anoParam = params.get("ano");
+const modeloParam = params.get("modelo");
+const marcaParam = params.get("marca");
+const edicaoParam = params.get("edicao");
+const desfileParam = params.get("desfile");
+
+if (searchParam) activeTags = [searchParam];
+if (anoParam) anoSelect.value = anoParam;
+if (marcaParam) marcaSelect.value = marcaParam;
+if (modeloParam) activeModelo = modeloParam;
+if (edicaoParam) activeEdicao = edicaoParam;
+if (desfileParam) activeDesfile = desfileParam;
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase().trim();
+  suggestionsBox.innerHTML = "";
+
+  if (!value) return;
+
+  const filtered = allTags.filter(tag =>
+    tag.toLowerCase().includes(value)
+  ).slice(0, 8);
+
+  filtered.forEach(tag => {
+    const div = document.createElement("div");
+    div.className = "suggestion";
+    div.innerText = tag;
+    div.onclick = () => {
+      activeModelo = "";
+      activeEdicao = "";
+      activeDesfile = "";
+      if (!activeTags.includes(tag)) {
+        activeTags.push(tag);
+      }
+      searchInput.value = "";
+      suggestionsBox.innerHTML = "";
+      renderTags();
+      filterData();
+    };
+    suggestionsBox.appendChild(div);
+  });
+});
+
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const value = searchInput.value.toLowerCase().trim();
+    if (value && !activeTags.includes(value)) {
+      activeModelo = "";
+      activeEdicao = "";
+      activeDesfile = "";
+      activeTags.push(value);
+      searchInput.value = "";
+      suggestionsBox.innerHTML = "";
+      renderTags();
+      filterData();
+    }
+  }
+});
+
+function renderTags() {
+  tagContainer.innerHTML = "";
+
+  activeTags.forEach(tag => {
+    const span = document.createElement("span");
+    span.className = "activeTag";
+    span.innerText = tag + " ×";
+    span.onclick = () => {
+      activeTags = activeTags.filter(t => t !== tag);
+      renderTags();
+      filterData();
+    };
+    tagContainer.appendChild(span);
+  });
+
+  if (activeModelo) {
+    const span = document.createElement("span");
+    span.className = "activeTag";
+    span.innerText = activeModelo + " ×";
+    span.onclick = () => {
+      activeModelo = "";
+      renderTags();
+      filterData();
+    };
+    tagContainer.appendChild(span);
+  }
+
+  if (activeEdicao) {
+    const span = document.createElement("span");
+    span.className = "activeTag";
+    span.innerText = activeEdicao + " ×";
+    span.onclick = () => {
+      activeEdicao = "";
+      renderTags();
+      filterData();
+    };
+    tagContainer.appendChild(span);
+  }
+
+  if (activeDesfile) {
+    const span = document.createElement("span");
+    span.className = "activeTag";
+    span.innerText = activeDesfile + " ×";
+    span.onclick = () => {
+      activeDesfile = "";
+      renderTags();
+      filterData();
+    };
+    tagContainer.appendChild(span);
+  }
+}
+
+function setGridMode(type) {
+  grid.className = type;
+}
+
+function updatePageContext(isDesfileMode, items = []) {
+  if (isDesfileMode && items.length) {
+    filtersWrap.classList.add("hidden");
+    suggestionsBox.style.display = "none";
+    tagContainer.classList.add("hidden");
+    topBar.classList.add("compact");
+    const first = items[0];
+    const desfileNome = first.desfile || (first.marca + " " + first.edicao);
+    desfileHero.innerHTML = `
+      <div class="desfileHeroCard">
+        <img class="desfileHeroImg" src="${first.image}" alt="${desfileNome}">
+        <div class="desfileHeroInfo">
+          <div class="desfileHeroKicker">Desfile</div>
+          <h2 class="desfileHeroTitle">${desfileNome}</h2>
+          <div class="desfileHeroMeta">${first.marca || ""}${first.ano ? " · " + first.ano : ""}${first.edicao ? " · " + first.edicao : ""}</div>
+        </div>
+      </div>
+    `;
+    desfileHero.classList.add("show");
+  } else {
+    filtersWrap.classList.remove("hidden");
+    suggestionsBox.style.display = "";
+    tagContainer.classList.remove("hidden");
+    topBar.classList.remove("compact");
+    desfileHero.classList.remove("show");
+    desfileHero.innerHTML = "";
+  }
+}
+
+function renderEmptyState() {
+  setGridMode("");
+  grid.innerHTML = `
+    <div class="emptyState">
+      <div class="emptyKicker">Arquivo</div>
+      <div class="emptyTitle">Nenhum resultado encontrado</div>
+      <div class="emptyText">Tente remover um filtro, trocar a busca ou voltar para uma marca, ano ou edição diferente.</div>
+    </div>
+  `;
+}
+
+function preloadImage(src) {
+  if (!src) return;
+  const img = new Image();
+  img.src = src;
+}
+
+function renderLooks(items) {
+  updatePageContext(!!(activeDesfile || (marcaSelect.value && activeEdicao)), items);
+
+  if (!items.length) {
+    renderEmptyState();
+    return;
+  }
+
+  setGridMode("looksGrid");
+  grid.innerHTML = "";
+
+  items.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.className = "lookCard";
+
+    const img = document.createElement("img");
+    img.src = item.thumb || item.image;
+    img.alt = item.marca || "";
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.onclick = () => abrirOverlay(items, index);
+
+    const label = document.createElement("div");
+    label.className = "lookCardLabel";
+    label.innerText = `LOOK ${String(index + 1).padStart(2, "0")}`;
+
+    card.appendChild(img);
+    card.appendChild(label);
+    grid.appendChild(card);
+  });
+}
+
+function groupBy(items, getKey) {
+  const map = {};
+  items.forEach(item => {
+    const key = getKey(item);
+    if (!map[key]) map[key] = [];
+    map[key].push(item);
+  });
+  return map;
+}
+
+function renderCoverGroups(groups, onClickBuilder) {
+  updatePageContext(false);
+
+  const entries = Object.entries(groups);
+  if (!entries.length) {
+    renderEmptyState();
+    return;
+  }
+
+  setGridMode("coverGrid");
+  grid.innerHTML = "";
+
+  entries.forEach(([key, items]) => {
+    const cover = items[0];
+
+    const card = document.createElement("div");
+    card.className = "coverCard";
+    card.onclick = () => onClickBuilder(key);
+
+    card.innerHTML = `
+      <img src="${cover.image}" alt="${key}" loading="lazy" decoding="async">
+      <div class="coverLabel">${key}</div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+function filtrarPor({ tag, marca, ano, modelo, edicao, desfile }) {
+  if (tag) {
+    activeTags = [tag];
+    activeModelo = "";
+    activeEdicao = "";
+    activeDesfile = "";
+    marcaSelect.value = "";
+  }
+
+  if (marca) {
+    marcaSelect.value = marca;
+    activeModelo = "";
+    activeEdicao = "";
+    activeDesfile = "";
+    activeTags = [];
+  }
+
+  if (ano) {
+    anoSelect.value = ano;
+    activeModelo = "";
+    activeEdicao = "";
+    activeDesfile = "";
+  }
+
+  if (modelo) {
+    activeModelo = modelo;
+    activeEdicao = "";
+    activeDesfile = "";
+    activeTags = [];
+  }
+
+  if (edicao) {
+    activeEdicao = edicao;
+    activeModelo = "";
+    activeDesfile = "";
+    activeTags = [];
+  }
+
+  if (desfile) {
+    activeDesfile = desfile;
+    activeModelo = "";
+    activeEdicao = "";
+    activeTags = [];
+  }
+
+  fecharOverlay();
+  renderTags();
+  filterData();
+}
+
+function updateOverlayContent() {
+  const item = currentOverlayItems[currentOverlayIndex];
+  if (!item) return;
+
+  overlayimg.src = item.thumb || item.image;
+
+  infoMarca.innerHTML = `<span class="value">${item.marca}</span>`;
+  infoMarca.querySelector("span").onclick = () => {
+    window.location.href = "index.html?marca=" + encodeURIComponent(item.marca);
+  };
+
+  infoAno.innerHTML = `<span class="value">${item.ano}</span>`;
+  infoAno.querySelector("span").onclick = () => filtrarPor({ ano: item.ano });
+
+  infoModelo.innerHTML = `<span class="value">${item.modelo || "-"}</span>`;
+  if (item.modelo) {
+    infoModelo.querySelector("span").onclick = () => filtrarPor({ modelo: item.modelo });
+  }
+
+  overlayCounter.innerText = `LOOK ${String(currentOverlayIndex + 1).padStart(2, "0")} DE ${String(currentOverlayItems.length).padStart(2, "0")}`;
+
+  thumbStrip.innerHTML = "";
+  currentOverlayItems.forEach((thumbItem, index) => {
+    const thumb = document.createElement("img");
+    thumb.className = "thumb" + (index === currentOverlayIndex ? " active" : "");
+    thumb.src = thumbItem.image;
+    thumb.alt = thumbItem.marca || "";
+    thumb.loading = "lazy";
+    thumb.onclick = () => {
+      currentOverlayIndex = index;
+      updateOverlayContent();
+    };
+    thumbStrip.appendChild(thumb);
+  });
+
+  const activeThumb = thumbStrip.querySelector(".thumb.active");
+  if (activeThumb) {
+    activeThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }
+
+  const nextItem = currentOverlayItems[(currentOverlayIndex + 1) % currentOverlayItems.length];
+  const prevItem = currentOverlayItems[(currentOverlayIndex - 1 + currentOverlayItems.length) % currentOverlayItems.length];
+  preloadImage(nextItem && nextItem.image);
+  preloadImage(prevItem && prevItem.image);
+}
+
+function abrirOverlay(items, index) {
+  currentOverlayItems = items;
+  currentOverlayIndex = index;
+
+  overlay.classList.add("active");
+  mainContent.classList.add("blur");
+
+  updateOverlayContent();
+}
+
+function irProximaImagem() {
+  if (!currentOverlayItems.length) return;
+  currentOverlayIndex = (currentOverlayIndex + 1) % currentOverlayItems.length;
+  updateOverlayContent();
+}
+
+function irImagemAnterior() {
+  if (!currentOverlayItems.length) return;
+  currentOverlayIndex = (currentOverlayIndex - 1 + currentOverlayItems.length) % currentOverlayItems.length;
+  updateOverlayContent();
+}
+
+
+imagePrevBtn.onclick = irImagemAnterior;
+imageNextBtn.onclick = irProximaImagem;
+
+function fecharOverlay() {
+  overlay.classList.remove("active");
+  mainContent.classList.remove("blur");
+}
+
+document.getElementById("closeBtn").onclick = fecharOverlay;
+
+overlay.onclick = (e) => {
+  if (e.target === overlay) fecharOverlay();
+};
+
+document.addEventListener("keydown", (e) => {
+  if (!overlay.classList.contains("active")) return;
+
+  if (e.key === "Escape") fecharOverlay();
+  if (e.key === "ArrowRight") irProximaImagem();
+  if (e.key === "ArrowLeft") irImagemAnterior();
+});
+
+anoSelect.addEventListener("change", () => {
+  activeEdicao = "";
+  activeDesfile = "";
+  filterData();
+});
+
+marcaSelect.addEventListener("change", () => {
+  activeModelo = "";
+  activeEdicao = "";
+  activeDesfile = "";
+  activeTags = [];
+  renderTags();
+  filterData();
+});
+
+function getCurrentLookItems() {
+  const ano = anoSelect.value;
+  const marca = marcaSelect.value;
+
+  return data.filter(item => {
+    const matchTags =
+      activeTags.length === 0 ||
+      activeTags.every(tag =>
+        (item.tags || []).some(t => t.toLowerCase().includes(tag.toLowerCase()))
+      );
+
+    const matchAno = ano ? item.ano == ano : true;
+    const matchMarca = marca ? item.marca === marca : true;
+    const matchModelo = activeModelo ? item.modelo === activeModelo : true;
+    const matchEdicao = activeEdicao
+  ? (item.edicao || "").toLowerCase() === activeEdicao.toLowerCase()
+  : true;
+    const matchDesfile =
+      activeDesfile
+        ? (item.desfile || (item.marca + " " + item.edicao)) === activeDesfile
+        : true;
+
+    return matchTags && matchAno && matchMarca && matchModelo && matchEdicao && matchDesfile;
+  });
+}
+
+function filterData() {
+  const filtered = getCurrentLookItems();
+
+  const ano = anoSelect.value;
+  const marca = marcaSelect.value;
+
+  const onlyMarcaMode =
+    marca &&
+    !ano &&
+    activeTags.length === 0 &&
+    !activeModelo &&
+    !activeEdicao &&
+    !activeDesfile;
+
+  const onlyEdicaoMode =
+    activeEdicao &&
+    !marca &&
+    !ano &&
+    activeTags.length === 0 &&
+    !activeModelo &&
+    !activeDesfile;
+
+
+  if (onlyMarcaMode) {
+  const ordenados = [...filtered].sort((a, b) => {
+    const anoA = Number(a.ano) || 0;
+    const anoB = Number(b.ano) || 0;
+
+    if (anoB !== anoA) return anoB - anoA;
+
+    const edicaoA = String(a.edicao || "");
+    const edicaoB = String(b.edicao || "");
+
+    return edicaoB.localeCompare(edicaoA, "pt-BR", { numeric: true });
+  });
+
+  const grupos = groupBy(
+    ordenados,
+    item => item.desfile || `${item.marca} ${item.edicao}` || "Sem desfile"
+  );
+
+  renderCoverGroups(grupos, (desfile) => {
+    window.location.href =
+      "index.html?desfile=" +
+      encodeURIComponent(desfile);
+  });
+
+  return;
+}
+
+  if (onlyEdicaoMode) {
+    const grupos = groupBy(filtered, item => item.marca || "Sem marca");
+    renderCoverGroups(grupos, (marcaNome) => {
+      window.location.href =
+        "index.html?marca=" +
+        encodeURIComponent(marcaNome) +
+        "&edicao=" +
+        encodeURIComponent(activeEdicao);
+    });
+    return;
+  }
+
+  renderLooks(filtered);
+}
+
+renderTags();
+filterData();
+</script>
+
+</body>
+</html>
