@@ -981,7 +981,11 @@ function buildMarcaMenu() {
 
   const grouped = {};
   marcas.forEach(marca => {
-    const letra = marca.charAt(0).toUpperCase();
+    const letra = marca
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .charAt(0)
+  .toUpperCase();
     if (!grouped[letra]) grouped[letra] = [];
     grouped[letra].push(marca);
   });

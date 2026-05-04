@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Tag Editor - Arquivo Moda</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  height: 100vh;
+}
+
+#topo {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  grid-column: 1 / 3;
+}
+
+#galeria {
+  padding: 12px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  background: #f4f4f4;
+}
+
+.card {
+  background: white;
+  padding: 6px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.card.active {
+  border-color: black;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card small {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+#editor {
+  border-left: 1px solid #ddd;
+  padding: 14px;
+  overflow-y: auto;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tag.active {
+  background: black;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 12px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+#infoLook {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+</style>
+</head>
+
+<body>
+
+<div id="topo">
+  <input type="file" id="fileInput" accept=".js">
+  <button onclick="baixar()">Baixar data.js atualizado</button>
+  <span id="status"></span>
+</div>
+
+<div id="galeria"></div>
+
+<div id="editor">
+  <h2>Editor de Tags</h2>
+
+  <div id="infoLook">Selecione uma imagem.</div>
+
+  <h3>Tags selecionadas</h3>
+  <div id="selecionadas"></div>
+
+  <h3>Buscar tag</h3>
+  <input id="busca" placeholder="Digite para filtrar tags...">
+
+  <h3>Tags disponíveis</h3>
+  <div id="tags"></div>
+</div>
+
+<script>
+let data = [];
+let currentLook = null;
+let currentIndex = null;
+
+const TAGS = [
+  "preto", "branco", "off-white", "bege", "marrom", "vermelho", "rosa",
+  "laranja", "amarelo", "verde", "azul", "roxo", "lilás", "cinza",
+  "prata", "dourado",
+
+  "vestido", "vestido curto", "vestido longo", "saia", "calça", "shorts",
+  "bermuda", "blusa", "camisa", "top", "cropped", "regata", "casaco",
+  "jaqueta", "blazer", "colete", "macacão", "body", "corset", "sunga",
+  "biquíni", "maiô",
+
+  "couro", "renda", "jeans", "tricô", "crochê", "cetim", "seda", "tule",
+  "organza", "linho", "algodão", "paetê", "metalizado", "transparencia",
+  "transparência", "plissado", "listra", "floral", "xadrez",
+
+  "alfaiataria", "oversized", "justo", "fluido", "estruturado",
+  "assimetrico", "assimétrico", "drapeado", "recorte", "fenda",
+  "babado", "franja", "bordado", "amarracao", "amarração",
+
+  "praia", "moda praia", "casual", "festa", "noite", "esportivo",
+  "minimalista", "romantico", "romântico", "sexy", "urbano",
+
+  "bolsa", "cinto", "bota", "sandália", "salto", "tênis", "óculos",
+  "chapéu", "lenço", "luvas",
+
+  "renda nordestina", "couro de pirarucu", "palha", "capim dourado",
+  "bordado manual", "artesanal", "feito à mão"
+];
+
+document.getElementById("fileInput").addEventListener("change", importarData);
+
+function importarData(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    let texto = reader.result.trim();
+
+    texto = texto
+      .replace(/^const\s+data\s*=\s*/, "")
+      .replace(/^let\s+data\s*=\s*/, "")
+      .replace(/^var\s+data\s*=\s*/, "")
+      .replace(/;?\s*$/, "");
+
+    try {
+      data = JSON.parse(texto);
+
+      data.forEach(item => {
+        if (!Array.isArray(item.tags)) item.tags = [];
+      });
+
+      renderGaleria();
+      renderTags();
+
+      document.getElementById("status").innerText =
+        ` ${data.length} looks carregados.`;
+    } catch (err) {
+      alert("Não consegui ler o data.js. O arquivo precisa estar como: const data = [...]");
+      console.error(err);
+    }
+  };
+
+  reader.readAsText(file);
+}
+
+function renderGaleria() {
+  const galeria = document.getElementById("galeria");
+  galeria.innerHTML = "";
+
+  data.forEach((look, index) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    if (index === currentIndex) card.classList.add("active");
+
+    const img = document.createElement("img");
+    img.src = look.thumb || look.image;
+
+    const label = document.createElement("small");
+    label.innerText = `${look.marca || ""} - ${look.desfile || ""}`;
+
+    card.onclick = () => selecionarLook(index);
+
+    card.appendChild(img);
+    card.appendChild(label);
+    galeria.appendChild(card);
+  });
+}
+
+function selecionarLook(index) {
+  currentIndex = index;
+  currentLook = data[index];
+
+  if (!Array.isArray(currentLook.tags)) {
+    currentLook.tags = [];
+  }
+
+  renderGaleria();
+  renderInfoLook();
+  renderSelecionadas();
+  renderTags();
+}
+
+function renderInfoLook() {
+  const info = document.getElementById("infoLook");
+
+  if (!currentLook) {
+    info.innerHTML = "Selecione uma imagem.";
+    return;
+  }
+
+  info.innerHTML = `
+    <strong>${currentLook.marca || ""}</strong><br>
+    ${currentLook.desfile || ""}<br>
+    Ano: ${currentLook.ano || ""}<br>
+    Modelo: ${currentLook.modelo || ""}
+  `;
+}
+
+function renderSelecionadas() {
+  const div = document.getElementById("selecionadas");
+  div.innerHTML = "";
+
+  if (!currentLook) return;
+
+  currentLook.tags.forEach(tag => {
+    const el = document.createElement("span");
+    el.className = "tag active";
+    el.innerText = tag + " ×";
+    el.onclick = () => toggleTag(tag);
+    div.appendChild(el);
+  });
+}
+
+function renderTags() {
+  const container = document.getElementById("tags");
+  const busca = normalizar(document.getElementById("busca").value);
+  container.innerHTML = "";
+
+  TAGS
+    .filter(tag => normalizar(tag).includes(busca))
+    .forEach(tag => {
+      const el = document.createElement("span");
+      el.className = "tag";
+      el.innerText = tag;
+
+      if (currentLook && currentLook.tags.includes(tag)) {
+        el.classList.add("active");
+      }
+
+      el.onclick = () => toggleTag(tag);
+      container.appendChild(el);
+    });
+}
+
+function toggleTag(tag) {
+  if (!currentLook) {
+    alert("Clique em uma imagem primeiro.");
+    return;
+  }
+
+  if (currentLook.tags.includes(tag)) {
+    currentLook.tags = currentLook.tags.filter(t => t !== tag);
+  } else {
+    currentLook.tags.push(tag);
+  }
+
+  currentLook.tags = [...new Set(currentLook.tags)];
+
+  renderSelecionadas();
+  renderTags();
+}
+
+function baixar() {
+  if (!data.length) {
+    alert("Importe o data.js primeiro.");
+    return;
+  }
+
+  const conteudo = "const data = " + JSON.stringify(data, null, 2) + ";";
+
+  const blob = new Blob([conteudo], { type: "text/javascript;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "data.js";
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
+function normalizar(texto) {
+  return String(texto)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+document.getElementById("busca").addEventListener("input", renderTags);
+</script>
+
+</body>
+</html>

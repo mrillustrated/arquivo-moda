@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Editor de Tags</title>
+
+<style>
+body {
+  font-family: Arial;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0;
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+#galeria img {
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+#galeria img.active {
+  border: 2px solid black;
+}
+
+#editor {
+  padding: 10px;
+  border-left: 1px solid #ddd;
+}
+
+.tag {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tag.active {
+  background: black;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+  <input type="file" id="fileInput">
+  <div id="galeria"></div>
+</div>
+
+<div id="editor">
+  <h3>Tags</h3>
+  <div id="tags"></div>
+
+  <h4>Selecionadas</h4>
+  <div id="selecionadas"></div>
+
+  <button onclick="baixar()">Baixar data.js atualizado</button>
+</div>
+
+<script>
+
+let desfile = null;
+let currentLook = null;
+
+// 🔥 COLOQUE SUAS TAGS AQUI (depois podemos ligar no json)
+const TAGS = [
+  "preto","branco","couro","renda","alfaiataria",
+  "oversized","justo","transparente","cropped",
+  "vestido","casaco","calça","saia","top"
+];
+
+// ===== IMPORTAR DATA =====
+document.getElementById("fileInput").addEventListener("change", e => {
+  const file = e.target.files[0];
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    desfile = eval(reader.result); // lê seu data.js
+    renderGaleria();
+  };
+  reader.readAsText(file);
+});
+
+// ===== GALERIA =====
+function renderGaleria() {
+  const galeria = document.getElementById("galeria");
+  galeria.innerHTML = "";
+
+  desfile.looks.forEach((look, i) => {
+    const img = document.createElement("img");
+    img.src = look.imagem;
+
+    img.onclick = () => {
+      document.querySelectorAll("#galeria img").forEach(el => el.classList.remove("active"));
+      img.classList.add("active");
+
+      currentLook = look;
+      renderSelecionadas();
+      renderTags();
+    };
+
+    galeria.appendChild(img);
+  });
+}
+
+// ===== TAGS =====
+function renderTags() {
+  const container = document.getElementById("tags");
+  container.innerHTML = "";
+
+  TAGS.forEach(tag => {
+    const btn = document.createElement("div");
+    btn.className = "tag";
+    btn.innerText = tag;
+
+    if (currentLook.tags.includes(tag)) {
+      btn.classList.add("active");
+    }
+
+    btn.onclick = () => toggleTag(tag);
+    container.appendChild(btn);
+  });
+}
+
+function toggleTag(tag) {
+  if (!currentLook) return;
+
+  if (currentLook.tags.includes(tag)) {
+    currentLook.tags = currentLook.tags.filter(t => t !== tag);
+  } else {
+    currentLook.tags.push(tag);
+  }
+
+  renderSelecionadas();
+  renderTags();
+}
+
+// ===== SELECIONADAS =====
+function renderSelecionadas() {
+  const div = document.getElementById("selecionadas");
+  div.innerHTML = "";
+
+  currentLook.tags.forEach(tag => {
+    const el = document.createElement("span");
+    el.className = "tag active";
+    el.innerText = tag + " ×";
+    el.onclick = () => toggleTag(tag);
+    div.appendChild(el);
+  });
+}
+
+// ===== EXPORTAR =====
+function baixar() {
+  const blob = new Blob(
+    ["const desfile = " + JSON.stringify(desfile, null, 2)],
+    { type: "text/javascript" }
+  );
+
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "data.js";
+  a.click();
+}
+
+</script>
+
+</body>
+</html>

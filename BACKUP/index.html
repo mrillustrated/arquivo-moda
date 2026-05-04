@@ -1139,7 +1139,7 @@ function updateOverlayContent() {
   const item = currentOverlayItems[currentOverlayIndex];
   if (!item) return;
 
-  overlayimg.src = item.thumb || item.image;
+  overlayImg.src = item.image;
 
   infoMarca.innerHTML = `<span class="value">${item.marca}</span>`;
   infoMarca.querySelector("span").onclick = () => {

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tag Editor Integrado - Arquivo Moda</title>
+
+<style>
+:root {
+  --bg: #f4f1ec;
+  --card: #fffaf3;
+  --ink: #1f1b16;
+  --muted: #756d63;
+  --line: #d8cfc0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#topo {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+  display: grid;
+  grid-template-columns: 240px 280px 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+input, select, button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+select, input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+}
+
+button {
+  padding: 10px 12px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: white;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+#status {
+  color: var(--muted);
+  font-size: 13px;
+  grid-column: 1 / -1;
+}
+
+#app {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+}
+
+#galeria {
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 12px;
+  align-content: start;
+}
+
+.card {
+  background: white;
+  border: 3px solid transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(0,0,0,.06);
+}
+
+.card.active { border-color: var(--ink); }
+
+.card.hasTags::after {
+  content: "tagueado";
+  display: block;
+  font-size: 11px;
+  padding: 5px 8px;
+  color: white;
+  background: var(--ink);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+}
+
+.card small {
+  display: block;
+  padding: 7px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+#editor {
+  min-height: 0;
+  overflow-y: auto;
+  border-left: 1px solid var(--line);
+  background: var(--card);
+  padding: 14px;
+}
+
+#preview {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 10px;
+  margin-bottom: 14px;
+}
+
+#preview img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: contain;
+  display: block;
+  background: #eee;
+  border-radius: 12px;
+}
+
+#infoLook {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+h2, h3 { margin: 14px 0 8px; }
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 999px;
+  padding: 7px 10px;
+  margin: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tag.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+#categoryTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 12px;
+  padding: 8px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.categoryTab {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.categoryTab.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+#tagsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+#tagsCounter {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+#tags {
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 6px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 14px;
+}
+
+.categoryTitle {
+  margin: 14px 4px 6px;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+#selecionadas {
+  min-height: 48px;
+  padding: 6px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: white;
+}
+
+.empty {
+  padding: 40px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  body { overflow: auto; height: auto; }
+  #topo { grid-template-columns: 1fr; }
+  #app { grid-template-columns: 1fr; }
+  #editor { border-left: none; border-top: 1px solid var(--line); }
+}
+</style>
+</head>
+
+<body>
+
+<div id="topo">
+  <input type="file" id="fileInput" accept=".js">
+
+  <select id="desfileSelect" disabled>
+    <option>Importe o data.js</option>
+  </select>
+
+  <input id="buscaTags" type="search" placeholder="Buscar tag..." disabled>
+
+  <div>
+    <button onclick="baixar()">Baixar data.js</button>
+    <button class="secondary" onclick="limparSelecao()">Limpar seleção</button>
+  </div>
+
+  <span id="status"></span>
+</div>
+
+<div id="app">
+  <main id="galeria">
+    <div class="empty">Importe seu data.js para começar.</div>
+  </main>
+
+  <aside id="editor">
+    <h2>Editor de Tags</h2>
+
+    <div id="preview">
+      <div class="empty">Clique em uma imagem para ver maior.</div>
+    </div>
+
+    <h3>Tags selecionadas</h3>
+    <div id="selecionadas"></div>
+
+    <div id="tagsHeader">
+      <h3>Tags disponíveis</h3>
+      <span id="tagsCounter"></span>
+    </div>
+
+    <div id="categoryTabs">
+      <button class="categoryTab active" data-cat="__todas">todas</button>
+    </div>
+
+    <div id="tags">
+      <div class="empty">As tags carregam pelo arquivo tags.json.</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+let data = [];
+let tagsData = {};
+let currentLook = null;
+let currentIndex = null;
+let desfileAtual = "";
+let categoriaAtual = "__todas";
+
+const fileInput = document.getElementById("fileInput");
+const desfileSelect = document.getElementById("desfileSelect");
+const buscaTags = document.getElementById("buscaTags");
+const galeria = document.getElementById("galeria");
+const statusEl = document.getElementById("status");
+
+fileInput.addEventListener("change", importarData);
+desfileSelect.addEventListener("change", () => {
+  desfileAtual = desfileSelect.value;
+  currentLook = null;
+  currentIndex = null;
+  renderGaleria();
+  renderPreview();
+  renderSelecionadas();
+  renderTags();
+});
+buscaTags.addEventListener("input", renderTags);
+
+carregarTags();
+
+async function carregarTags() {
+  try {
+    const res = await fetch("tags.json");
+    const json = await res.json();
+    tagsData = json.categorias || {};
+    buscaTags.disabled = false;
+
+    renderCategoryTabs();
+
+    const total = json.meta?.total_tags || Object.values(tagsData).flat().length;
+    statusEl.innerText = `${total} tags carregadas em ${Object.keys(tagsData).length} categorias.`;
+    renderTags();
+  } catch (err) {
+    statusEl.innerText = "Não consegui carregar tags.json. Abra com servidor local.";
+    console.error(err);
+  }
+}
+
+function renderCategoryTabs() {
+  const box = document.getElementById("categoryTabs");
+  box.innerHTML = "";
+
+  const todas = document.createElement("button");
+  todas.className = "categoryTab";
+  todas.dataset.cat = "__todas";
+  todas.textContent = "todas";
+  todas.onclick = () => selecionarCategoria("__todas");
+  if (categoriaAtual === "__todas") todas.classList.add("active");
+  box.appendChild(todas);
+
+  Object.entries(tagsData).forEach(([categoria, tags]) => {
+    const btn = document.createElement("button");
+    btn.className = "categoryTab";
+    btn.dataset.cat = categoria;
+    btn.textContent = `${categoria} (${tags.length})`;
+    btn.onclick = () => selecionarCategoria(categoria);
+    if (categoriaAtual === categoria) btn.classList.add("active");
+    box.appendChild(btn);
+  });
+}
+
+function selecionarCategoria(categoria) {
+  categoriaAtual = categoria;
+  renderCategoryTabs();
+  renderTags();
+}
+
+function importarData(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    let texto = reader.result.trim();
+
+    texto = texto
+      .replace(/^const\s+data\s*=\s*/, "")
+      .replace(/^let\s+data\s*=\s*/, "")
+      .replace(/^var\s+data\s*=\s*/, "")
+      .replace(/;?\s*$/, "");
+
+    try {
+      data = JSON.parse(texto);
+
+      data.forEach(item => {
+        if (!Array.isArray(item.tags)) item.tags = [];
+      });
+
+      popularDesfiles();
+      renderGaleria();
+
+      statusEl.innerText = `${Object.values(tagsData).flat().length} tags carregadas em ${Object.keys(tagsData).length} categorias. ${data.length} looks importados.`;
+    } catch (err) {
+      alert("Não consegui ler o data.js. Ele precisa estar como: const data = [...]");
+      console.error(err);
+    }
+  };
+
+  reader.readAsText(file);
+}
+
+function popularDesfiles() {
+  const desfiles = [...new Set(data.map(item => item.desfile || "Sem desfile"))]
+    .sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+  desfileSelect.innerHTML = "";
+
+  desfiles.forEach(desfile => {
+    const total = data.filter(item => (item.desfile || "Sem desfile") === desfile).length;
+    const opt = document.createElement("option");
+    opt.value = desfile;
+    opt.textContent = `${desfile} (${total})`;
+    desfileSelect.appendChild(opt);
+  });
+
+  desfileSelect.disabled = false;
+  desfileAtual = desfiles[0] || "";
+}
+
+function looksDoDesfileAtual() {
+  return data
+    .map((look, index) => ({ look, index }))
+    .filter(item => (item.look.desfile || "Sem desfile") === desfileAtual);
+}
+
+function renderGaleria() {
+  galeria.innerHTML = "";
+
+  if (!data.length) {
+    galeria.innerHTML = `<div class="empty">Importe seu data.js para começar.</div>`;
+    return;
+  }
+
+  const looks = looksDoDesfileAtual();
+
+  if (!looks.length) {
+    galeria.innerHTML = `<div class="empty">Nenhum look neste desfile.</div>`;
+    return;
+  }
+
+  looks.forEach(({ look, index }) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    if (index === currentIndex) card.classList.add("active");
+
+    const tagsReais = (look.tags || []).filter(tag => !String(tag).match(/^\d{4}$/));
+    if (tagsReais.length) card.classList.add("hasTags");
+
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.src = look.thumb || look.image;
+
+    const label = document.createElement("small");
+    label.innerText = `${look.marca || ""} — ${extrairNomeImagem(look.image)}`;
+
+    card.onclick = () => selecionarLook(index);
+
+    card.appendChild(img);
+    card.appendChild(label);
+    galeria.appendChild(card);
+  });
+}
+
+function selecionarLook(index) {
+  currentIndex = index;
+  currentLook = data[index];
+
+  if (!Array.isArray(currentLook.tags)) currentLook.tags = [];
+
+  renderGaleria();
+  renderPreview();
+  renderSelecionadas();
+  renderTags();
+}
+
+function renderPreview() {
+  const preview = document.getElementById("preview");
+
+  if (!currentLook) {
+    preview.innerHTML = `<div class="empty">Clique em uma imagem para ver maior.</div>`;
+    return;
+  }
+
+  preview.innerHTML = `
+    <img src="${currentLook.image}" alt="">
+    <div id="infoLook">
+      <strong>${currentLook.marca || ""}</strong><br>
+      ${currentLook.desfile || ""}<br>
+      Ano: ${currentLook.ano || ""}<br>
+      Modelo: ${currentLook.modelo || ""}<br>
+      Arquivo: ${extrairNomeImagem(currentLook.image)}
+    </div>
+  `;
+}
+
+function renderSelecionadas() {
+  const div = document.getElementById("selecionadas");
+  div.innerHTML = "";
+
+  if (!currentLook) return;
+
+  currentLook.tags.forEach(tag => {
+    const el = document.createElement("span");
+    el.className = "tag active";
+    el.innerText = tag + " ×";
+    el.onclick = () => toggleTag(tag);
+    div.appendChild(el);
+  });
+}
+
+function renderTags() {
+  const container = document.getElementById("tags");
+  const counter = document.getElementById("tagsCounter");
+  container.innerHTML = "";
+
+  const termo = normalizar(buscaTags.value || "");
+
+  if (!Object.keys(tagsData).length) {
+    container.innerHTML = `<div class="empty">Nenhuma tag carregada.</div>`;
+    counter.textContent = "";
+    return;
+  }
+
+  const entradas = categoriaAtual === "__todas"
+    ? Object.entries(tagsData)
+    : Object.entries(tagsData).filter(([categoria]) => categoria === categoriaAtual);
+
+  let totalMostrado = 0;
+
+  entradas.forEach(([categoria, tags]) => {
+    const filtradas = tags.filter(tag => normalizar(tag).includes(termo));
+
+    if (!filtradas.length) return;
+
+    totalMostrado += filtradas.length;
+
+    const title = document.createElement("div");
+    title.className = "categoryTitle";
+    title.textContent = `${categoria} (${filtradas.length})`;
+    container.appendChild(title);
+
+    filtradas.forEach(tag => {
+      const el = document.createElement("span");
+      el.className = "tag";
+      el.innerText = tag;
+
+      if (currentLook && currentLook.tags.includes(tag)) {
+        el.classList.add("active");
+      }
+
+      el.onclick = () => toggleTag(tag);
+      container.appendChild(el);
+    });
+  });
+
+  counter.textContent = `${totalMostrado} tags visíveis`;
+
+  if (!totalMostrado) {
+    container.innerHTML = `<div class="empty">Nenhuma tag encontrada nesta categoria.</div>`;
+  }
+}
+
+function toggleTag(tag) {
+  if (!currentLook) {
+    alert("Clique em uma imagem primeiro.");
+    return;
+  }
+
+  if (currentLook.tags.includes(tag)) {
+    currentLook.tags = currentLook.tags.filter(t => t !== tag);
+  } else {
+    currentLook.tags.push(tag);
+  }
+
+  currentLook.tags = [...new Set(currentLook.tags)];
+  renderSelecionadas();
+  renderTags();
+  renderGaleria();
+}
+
+function limparSelecao() {
+  if (!currentLook) return;
+  currentLook.tags = [];
+  renderSelecionadas();
+  renderTags();
+  renderGaleria();
+}
+
+function baixar() {
+  if (!data.length) {
+    alert("Importe o data.js primeiro.");
+    return;
+  }
+
+  const conteudo = "const data = " + JSON.stringify(data, null, 2) + ";";
+  const blob = new Blob([conteudo], { type: "text/javascript;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "data.js";
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
+function normalizar(texto) {
+  return String(texto)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
+
+function extrairNomeImagem(url) {
+  return String(url || "").split("/").pop() || "";
+}
+</script>
+
+</body>
+</html>
