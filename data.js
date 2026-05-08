@@ -113805,5 +113805,2213 @@ const data = [
       "2025"
     ],
     "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2025/independente/misci/look53.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look01.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look01.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look02.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look02.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look03.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look03.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look04.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look04.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look05.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look05.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look06.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look06.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look07.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look07.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look08.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look08.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look09.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look09.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look10.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look10.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look11.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look11.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look12.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look12.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look13.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look13.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look14.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look14.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look15.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look15.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look16.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look16.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look17.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look17.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look18.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look18.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look19.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look19.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look20.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look20.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look21.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look21.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look22.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look22.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look23.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look23.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look24.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look24.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look25.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look25.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look26.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look26.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look27.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look27.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look28.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look28.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look29.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look29.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look30.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look30.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look31.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look31.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look32.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look32.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look33.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look33.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look34.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look34.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look35.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look35.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look36.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look36.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look37.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look37.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look38.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look38.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look39.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look39.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look40.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look40.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look41.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look41.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look42.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look42.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look43.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look43.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look44.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look44.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look45.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look45.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look46.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look46.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look47.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look47.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look48.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look48.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look49.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look49.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look50.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look50.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look51.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look51.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look52.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look52.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look53.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look53.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look54.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look54.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look55.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look55.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look56.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look56.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look57.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look57.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look58.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look58.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look59.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look59.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look60.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look60.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look61.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look61.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look62.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look62.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look63.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look63.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look64.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look64.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look65.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look65.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look66.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look66.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look67.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look67.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look68.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look68.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look69.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look69.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look70.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look70.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look71.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look71.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look72.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look72.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look73.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look73.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look74.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look74.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look75.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look75.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look76.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look76.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look77.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look77.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look78.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look78.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look79.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look79.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look80.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look80.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look81.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look81.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look82.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look82.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look83.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look83.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look84.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look84.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look85.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look85.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look86.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look86.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look87.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look87.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look88.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look88.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look89.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look89.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look90.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look90.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look91.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look91.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look92.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look92.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look93.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look93.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look94.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look94.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look95.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look95.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look96.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look96.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look97.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look97.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look98.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look98.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look99.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look99.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look100.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look100.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look101.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look101.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look102.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look102.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look103.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look103.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look104.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look104.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look105.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look105.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look106.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look106.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look107.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look107.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look108.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look108.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look109.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look109.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look110.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look110.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look111.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look111.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look112.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look112.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look113.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look113.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look114.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look114.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look115.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look115.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look116.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look116.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look117.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look117.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look118.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look118.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look119.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look119.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look120.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look120.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look121.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look121.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look122.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look122.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look123.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look123.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look124.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look124.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look125.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look125.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look126.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look126.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look127.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look127.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look128.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look128.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look129.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look129.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look130.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look130.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look131.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look131.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look132.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look132.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look133.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look133.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look134.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look134.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look135.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look135.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look136.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look136.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look137.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look137.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look138.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look138.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look139.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look139.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look140.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look140.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look141.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look141.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look142.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look142.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look143.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look143.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look144.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look144.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look145.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look145.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look146.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look146.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look147.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look147.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look148.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look148.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look149.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look149.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look150.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look150.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look151.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look151.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look152.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look152.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look153.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look153.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look154.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look154.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look155.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look155.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look156.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look156.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look157.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look157.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look158.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look158.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look159.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look159.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look160.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look160.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look161.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look161.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look162.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look162.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look163.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look163.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look164.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look164.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look165.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look165.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look166.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look166.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look167.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look167.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look168.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look168.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look169.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look169.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look170.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look170.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look171.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look171.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look172.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look172.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look173.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look173.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look174.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look174.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look175.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look175.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look176.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look176.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look177.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look177.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look178.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look178.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look179.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look179.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look180.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look180.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look181.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look181.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look182.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look182.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look183.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look183.jpg"
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look184.jpg",
+    "marca": "Cavalera",
+    "ano": 2012,
+    "modelo": "",
+    "edicao": "spfwn32",
+    "desfile": "Cavalera SPFWN32",
+    "tags": [
+      "2012"
+    ],
+    "thumb": "https://cdn.jsdelivr.net/gh/mrillustrated/arquivo-moda@main/images/2012/spfwn32/cavalera/look184.jpg"
   }
 ];
