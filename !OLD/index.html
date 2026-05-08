@@ -1015,7 +1015,11 @@ function updatePageContext(isDesfileMode, items = []) {
     tagContainer.classList.add("hidden");
     topBar.classList.add("compact");
     const first = items[0];
-    const desfileNome = first.desfile || (first.marca + " " + first.edicao);
+    const desfileNome = first.desfile || (
+  first.edicao
+    ? `${first.marca} ${first.edicao}`
+    : first.marca
+);
     desfileHero.innerHTML = `
       <div class="desfileHeroCard">
         <img class="desfileHeroImg" src="${normalizarUrlImagem(first.thumb || first.image)}" alt="${desfileNome}">
@@ -1306,7 +1310,11 @@ function getCurrentLookItems() {
   : true;
     const matchDesfile =
       activeDesfile
-        ? (item.desfile || (item.marca + " " + item.edicao)) === activeDesfile
+        ? (item.desfile || (
+  item.edicao
+    ? `${item.marca} ${item.edicao}`
+    : item.marca
+)) === activeDesfile
         : true;
 
     return matchTags && matchAno && matchMarca && matchModelo && matchEdicao && matchDesfile;

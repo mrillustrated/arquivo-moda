@@ -154,7 +154,10 @@ def main():
 
     ano = int(ano_txt)
 
-    edicao_input = perguntar("Edição. Ex: riofw01 ou spfwn55: ")
+    edicao_input = perguntar(
+    "Edição (opcional). Ex: riofw01 ou spfwn55. Enter para vazio: ",
+    obrigatorio=False
+    )
     marca_input = perguntar("Marca. Ex: Aluf: ")
 
     modelo_padrao = perguntar("Modelo padrão, opcional. Enter para deixar vazio: ", obrigatorio=False)
@@ -163,11 +166,14 @@ def main():
     edicao_slug = slugify(edicao_input)
     marca_slug = slugify(marca_input)
 
-    if not edicao_slug or not marca_slug:
+    if not marca_slug:
         print("ERRO: edição ou marca inválida.")
         return
 
+    if edicao_slug:
     pasta_destino = IMAGES_DIR / str(ano) / edicao_slug / marca_slug
+else:
+    pasta_destino = IMAGES_DIR / str(ano) / marca_slug
     pasta_destino.mkdir(parents=True, exist_ok=True)
 
     data = carregar_data()
@@ -215,7 +221,11 @@ def main():
             "ano": ano,
             "modelo": modelo_padrao.strip(),
             "edicao": edicao_slug,
-            "desfile": f"{marca_input.strip()} {edicao_slug.upper()}",
+            "desfile": (
+    f"{marca_input.strip()} {edicao_slug.upper()}"
+    if edicao_slug
+    else marca_input.strip()
+),
             "tags": tags_padrao[:],
             "thumb": url
         }
@@ -237,7 +247,31 @@ def main():
     print(f'git add -f "{pasta_destino.as_posix()}" data.js')
     print(f'git commit -m "Adicionar desfile {marca_input.strip()} {edicao_slug.upper()}"')
     print("git push origin main")
-    print("\nDepois abra o data.js no tag-editor para revisar tags/modelos.")
+    import subprocess
+
+subprocess.run(["git", "reset"])
+
+subprocess.run([
+    "git",
+    "add",
+    "-f",
+    str(pasta_destino),
+    "data.js"
+])
+
+subprocess.run([
+    "git",
+    "commit",
+    "-m",
+    f"Adicionar desfile {marca_input.strip()} {edicao_slug.upper() if edicao_slug else ''}".strip()
+])
+
+subprocess.run([
+    "git",
+    "push",
+    "origin",
+    "main"
+])
 
 
 if __name__ == "__main__":

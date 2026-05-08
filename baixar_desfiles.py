@@ -58,32 +58,17 @@ def extrair_imagens(link):
     urls = []
 
     for img in soup.find_all("img"):
-        src = (
-            img.get("data-src")
-            or img.get("data-lazy-src")
-            or img.get("data-original")
-            or img.get("src")
-        )
+        src = img.get("src") or img.get("data-src") or img.get("data-lazy-src")
+        if src:
+            urls.append(urljoin(link, src))
 
-        if not src:
-            continue
-
-        url_final = urljoin(link, src)
-
-        # ignora thumbs / miniaturas
-        url_lower = url_final.lower()
-        if any(palavra in url_lower for palavra in [
-            "thumb",
-            "thumbnail",
-            "-150x",
-            "-300x",
-            "_thumb",
-            "small",
-            "placeholder"
-        ]):
-            continue
-
-        urls.append(url_final)
+        srcset = img.get("srcset")
+        if srcset:
+            partes = srcset.split(",")
+            for parte in partes:
+                url = parte.strip().split(" ")[0]
+                if url:
+                    urls.append(urljoin(link, url))
 
     urls_limpas = []
     vistos = set()

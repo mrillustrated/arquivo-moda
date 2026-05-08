@@ -967,7 +967,11 @@ function showArquivoGrid() {
       <img src="${item.image}" alt="${item.marca}">
       <div class="cardLabel">${item.marca}</div>
     `;
-    card.onclick = () => irDesfile(item.desfile || (item.marca + " " + item.edicao));
+    card.onclick = () => irDesfile(item.desfile || (
+  item.edicao
+    ? `${item.marca} ${item.edicao}`
+    : item.marca
+));
     arquivoGrid.appendChild(card);
   });
 }
@@ -1133,7 +1137,11 @@ function buildUltimosDesfilesMenu() {
   const vistos = new Set();
 
   [...data].reverse().forEach(item => {
-    const chave = item.desfile || (item.marca + "_" + item.edicao);
+    const chave = item.desfile || (
+  item.edicao
+    ? `${item.marca}_${item.edicao}`
+    : item.marca
+);
     if (!vistos.has(chave)) {
       vistos.add(chave);
       unicos.push(item);
@@ -1142,7 +1150,11 @@ function buildUltimosDesfilesMenu() {
 
   const html = unicos.map(item =>
     `<div class="sidebarItem" onclick="go('index.html?desfile=${encodeURIComponent(item.desfile || "")}')">
-      ${item.desfile || (item.marca + " " + item.edicao)}
+      ${item.desfile || (
+  item.edicao
+    ? `${item.marca} ${item.edicao}`
+    : item.marca
+)}
     </div>`
   ).join("");
 
@@ -1173,7 +1185,11 @@ const recentesUnicos = [];
 const vistosRecentes = new Set();
 
 [...data].reverse().forEach(item => {
-  const chave = item.desfile || (item.marca + "_" + item.edicao);
+  const chave = item.desfile || (
+  item.edicao
+    ? `${item.marca}_${item.edicao}`
+    : item.marca
+);
   if (!vistosRecentes.has(chave)) {
     vistosRecentes.add(chave);
     recentesUnicos.push(item);
@@ -1190,7 +1206,11 @@ recentesUnicos.slice(0, 5).forEach(item => {
     <div class="cardLabel">${item.marca}</div>
   `;
   aplicarFallbackImagem(card.querySelector("img"), item, "card de arquivo/recentes");
-  card.onclick = () => irDesfile(item.desfile || (item.marca + " " + item.edicao));
+  card.onclick = () => irDesfile(item.desfile || (
+  item.edicao
+    ? `${item.marca} ${item.edicao}`
+    : item.marca
+));
   recentesDiv.appendChild(card);
 });
 
