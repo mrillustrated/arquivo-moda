@@ -117201,5 +117201,365 @@ const data = [
       "2013"
     ],
     "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2013/fashionrio2013/2nd-floor/look35.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look01.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look01.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look02.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look02.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look03.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look03.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look04.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look04.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look05.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look05.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look06.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look06.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look07.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look07.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look08.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look08.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look09.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look09.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look10.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look10.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look11.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look11.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look12.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look12.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look13.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look13.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look14.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look14.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look15.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look15.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look16.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look16.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look17.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look17.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look18.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look18.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look19.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look19.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look20.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look20.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look21.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look21.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look22.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look22.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look23.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look23.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look24.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look24.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look25.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look25.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look26.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look26.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look27.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look27.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look28.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look28.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look29.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look29.jpg"
+  },
+  {
+    "image": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look30.jpg",
+    "marca": "2nd Floor",
+    "ano": "2014",
+    "modelo": "",
+    "edicao": "fashionrio2014",
+    "desfile": "2nd Floor FASHIONRIO2014",
+    "tags": [
+      "2014"
+    ],
+    "thumb": "https://raw.githubusercontent.com/mrillustrated/arquivo-moda/main/images/2014/fashionrio2014/2nd-floor/look30.jpg"
   }
 ];
